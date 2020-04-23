@@ -166,6 +166,7 @@ color: whitesmoke;
 
 .article1 {
     max-height: 700px;
+    min-height: 700px;
     position: static;
     display: inline-block;
     padding-left: 200px;
