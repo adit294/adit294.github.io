@@ -1,0 +1,165 @@
+<html>
+	<head>
+        <title>Video calling security</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
+
+	</head>
+	<body>
+        <div class="topbutton">
+            <a href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
+		<div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                       <a href="index.html">Home</a>
+               </div>
+                   <div class="nav-link-wrapper">
+                       <a href="about.html">About</a>
+                   </div>
+                   <div class="nav-link-wrapper">
+                         <a href="articles.html">Articles</a>
+                    </div> 
+
+                    <div class="nav-link-wrapper">
+                        <a href="contactus.html">Contact</a>
+                   </div>     
+
+                   
+           </div>
+           <div class="right-side">
+               <div class="brand">
+                <div> <img src="brandlogo.png" alt=""></div>
+               </div>
+            </div>
+        </div>
+
+  <div class="article1">
+<div class="articleheading1">
+        <h1 id="zoom-and-houseparty-threats-to-privacy-security-">Zoom and Houseparty — Threats To Privacy &amp; Security?<br> <br> </h1>
+    </div>
+        <p>
+            <div class="image-portfolio-wrapper1">
+            <img src="https://cdn-images-1.medium.com/max/2000/1*kJAFq0vDL_q2sr7kFM1xgQ.png" alt="">
+        </div>
+        </p>
+        <p>As the world grapples a pandemic-social distancing, quarantine and lockdowns are the new normal, millions have flocked to
+         chatting and conferencing apps such as zoom, houseparty and messenger.
+         Video conferencing is a great way to learn and connect to our friends and family. Such apps are now seeing an all time
+         high usage of their services, but are they resorting to insecure means to handle the growing user traffic? <br>
+        Not only stars and business have put trust in these apps but also top government officials are using it to carry administrative work.</p>
+
+            <br>
+        <p>
+            <div class="image-portfolio-wrapper1">  <img src="https://cdn-images-1.medium.com/max/2000/1*dL-sIfu00Y5shj4466PseA.png" alt="UK PM, Boris Johnson using zoom.">
+            </div>
+            </p>
+            <br>
+        <p><strong>UK Prime Minister Boris Johnson accidentally revealed his Zoom ID for Cabinet meeting on Twitter,</strong> this sparked security and privacy concerns for the app.</p>
+        <p>There have been many reports stating that unknown users joined the app by managing to get the zoom meeting ids and showed obscene and graphic content.</p>
+       <br>
+        <h1 id="facebook-zoom-a-lethal-mix">Facebook &amp; Zoom- A lethal mix</h1>
+        <p>Zoom used Facebook’s sdk . SDK is a pre compiled code that developers can use to build certain features into their apps. Facebook can use this to steal your private information, every time you opened the app Facebook received the following information as stated in the updated privacy policy of zoom:-</p>
+        <ul>
+        <li><p>Application Bundle Identifier</p>
+        </li>
+        <li><p>Application Instance ID</p>
+        </li>
+        <li><p>Application Version</p>
+        </li>
+        <li><p>Device Carrier</p>
+        </li>
+        <li><p>iOS Advertiser ID</p>
+        </li>
+        <li><p>iOS Device CPU Cores</p>
+        </li>
+        <li><p>iOS Device Disk Space Available</p>
+        </li>
+        <li><p>iOS Device Disk Space Remaining</p>
+        </li>
+        <li><p>iOS Device Display Dimensions</p>
+        </li>
+        <li><p>iOS Device Model</p>
+        </li>
+        <li><p>iOS Language</p>
+        </li>
+        <li><p>iOS Timezone</p>
+        </li>
+        <li><p>iOS Version</p>
+        </li>
+        <li><p>IP Address</p>
+        </li>
+        </ul>
+        <p>
+            <div class="image-portfolio-wrapper1"> 
+            <img src="https://cdn-images-1.medium.com/max/2000/1*5p4uqyDqIKqZe-wNNEEUcw.png" alt="Zoom privacy policy about third party apps">
+            </div>
+        </p>
+        <br>
+        <p>Zoom recently removed the Facebook SDK and pretended to not know that Facebook collected the aforementioned data.</p>
+        <br>
+        <h1 id="the-report-of-the-citizen-lab-university-of-toronto">The report of the Citizen Lab, University of Toronto</h1>
+        <p>A team at The Citizen Lab found that Zoom was using a non-standard type of encryption, and routing data through China, and that there are discrepancies between security claims in Zoom documentation and how the platform actually works.</p>
+        <p>Eric Yuan, CEO of Zoom Video Communications stated that this was done <em>“by mistake”</em> to handle the growing the number of users and to avoid crashes.</p>
+        <h3 id="the-security-flaws-as-stated-by-the-citizen-lab-were-">The <strong>security flaws</strong> as stated by the citizen lab were:</h3>
+        <blockquote>
+            <div class="zoom-encrpytioninfo">
+        <p> Zoom <a href="https://zoom.us/docs/doc/Zoom-Security-White-Paper.pdf">documentation</a> claims that the app uses <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">“AES-256” </a>encryption for meetings where possible.
+         However, in our testing, a single <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES-128</a> key was used in ECB mode by all meeting participants to encrypt and decrypt audio and video. The use of ECB mode is not recommended because patterns present in the plaintext are preserved during encryption. What this finding means is that the encryption in Zoom does not seem to have been well-designed or implemented.
+         The AES-128 keys, which we verified were sufficient to decrypt Zoom packets intercepted in Internet traffic, appeared to be generated by Zoom servers, and in some cases, were delivered to participants in a Zoom meeting through servers in China, even when all meeting participants, and the Zoom subscriber’s company, were outside of China. This finding is significant because Zoom is a company that primarily serves customers in North America and sending encryption keys via servers in China may potentially open Zoom up to requests from authorities in China to disclose the encryption keys. While this scenario is plausible, we do not have evidence that authorities in China or any other state have actually obtained meeting encryption keys.</p>
+        </div>
+        </blockquote>
+        <br>
+        <p>
+            <div class="image-portfolio-wrapper1"> 
+            <img src="https://cdn-images-1.medium.com/max/2000/1*gCaQmO8FWTmyiUYchmCpog.png" alt="A representation of the flaw in encryption"></div></p>
+        <br>
+            <p>Large firms like <strong>Google, </strong>NASA, Apple, SpaceX are not allowing employees to use Zoom.</p>
+
+        <h1 id="-500-000-hacked-zoom-accounts-being-sold-on-dark-web-"><strong>500,000 Hacked Zoom Accounts Being Sold on Dark Web!</strong></h1>
+        <p>Zoom seems to have fallen deeper into trouble as a report by Bleeping Computer states that 500K zoom accounts were hacked and their data was sold. Every account was disposed for less than a penny each, and in some cases, given away for free.The accounts include those of well-known companies such as <strong>Chase, Citibank, educational institutions, and more</strong>.
+        According to cybersecurity intelligence firm Cyble, free Zoom accounts were being posted on hacker forums around April 1 to gain an increased reputation in the hacker community.
+        The purchased accounts include a victim’s email address, password, personal meeting URL, and their HostKey.
+        Bleeping Computer later confirmed that credentials posted on the forums were genuine.</p>
+        <p>Many House party users too reported e-mails and various apps being hacked after downloading the app.</p>
+        <h1 id="so-what-can-be-a-secure-alternative-">So what can be a secure alternative?</h1>
+        <p>
+            <div class="image-portfolio-wrapper1"> 
+            <img src="https://cdn-images-1.medium.com/max/2000/1*BEDsmEJbGShN-Katf2oRQw.png" alt=""></div></p>
+       <br>
+            <p>End to end encrypted AES256 encryption is a must and should preferably be open source. This ensures much greater security and privacy to its users.</p>
+        <p>Here are few which can be used:-</p>
+        <br>
+        <h1 id="group-facetime">Group FaceTime</h1>
+        <p>
+            <div class="image-portfolio-wrapper1"> 
+            <img src="https://cdn-images-1.medium.com/max/2000/1*wi7tZsVHXNAwF6X92P3F4w.png" alt=""></div></p>
+        <br>
+            <p>If you use Apple products, you can use Group facetime meetings. It supports up to 30 callers and has features like screensharing.</p>
+            <p>FaceTime uses Internet Connectivity Establishment (ICE) to establish a peer-to-peer connection between devices. Using Session Initiation Protocol (SIP) messages, the devices verify their identity certificates and establish a shared secret for each session. The cryptographic nonces supplied by each device are combined to salt keys for each of the media channels, which are streamed via Secure Real Time Protocol (SRTP) using AES-256 encryption.</p>
+        <br>
+            <h1 id="signal-video-call">Signal video call</h1>
+        <p>
+            <div class="image-portfolio-wrapper1"> 
+            <img src="https://cdn-images-1.medium.com/max/2000/1*0clhZzBqd2ut0yhbqLkHBQ.png" alt=""></div></p>
+        <br>
+            <p>Highly secure and well know <strong>signal </strong>allows for best in class end to end encryption and lets you share all messages, photos, videos, files and chat using video.Group chats are all so supported.</p>
+       <br>
+            <h1 id="for-businesses">For businesses</h1>
+        <p>
+            <div class="image-portfolio-wrapper1"> 
+            <img src="https://cdn-images-1.medium.com/max/2000/1*95_YSzbNtolZt0e2mSEHwQ.png" alt=""></div></p>
+        <br>
+            <p><h3>Cisco Webex meetings.</h3></p>
+        <p>Webex Meetings offers end-to-end encryption as an option on both video and audio chat as opposed to zooms end to end encryption only on audio chats.</p>
+        <br><br>
+    </div>
+       </div> 
+
+  </body>
+</html>

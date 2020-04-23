@@ -1,0 +1,343 @@
+html {
+scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans Condensed';
+    padding-top: 150px;
+    
+}
+
+.container{
+ display: grid;
+
+}
+.images-wrapper{
+    position: fixed;
+    left: 0;
+    top: 88px;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    animation: animate 16s ease-in-out infinite;
+    background-size: cover;
+
+}
+.nav-wrapper {
+    display: flex;
+    left:0;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    padding: 18px;;
+    padding-left: 30px;
+    background-size: cover;
+    position: fixed;
+    border: black;
+    top: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.left-side{ 
+     display: flex;
+     top: 0px;
+     padding-top: 15px;
+     padding-left: 1px;
+
+}
+.right-side{
+    display: flex;
+    font-size: 1.1em;
+    top: 0px;
+}
+
+
+
+.nav-wrapper > .left-side > div {
+     margin-right:20px ;
+     font-size: 0.9em ;
+     text-transform: uppercase;   
+     top: 0px;
+}
+
+.nav-link-wrapper {
+
+    height: 22px ;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+ color: #8a8a8a ;
+ text-decoration: none;
+ transition: color 0.5s;
+ top: 0px;
+}
+
+.nav-link-wrapper:hover{
+border-bottom: 1px solid black ;
+top: 0px;
+}
+ 
+.nav-link-wrapper a:hover{
+   color: black ;
+   top: 0px;
+    }
+
+.thankee {
+ text-align: center;
+ color: palevioletred;
+ border-bottom: 1px solid transparent;
+ transition: border-bottom 0.75s;
+ }
+
+.thankee a {
+    color:palevioletred ;
+    text-decoration: none;
+    transition: color 0.75s;
+}
+.thankee:hover{
+    border-bottom: 1px solid whitesmoke ;
+}
+
+.thankee a:hover{
+color: whitesmoke;
+ }
+
+.outer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5)
+}
+
+
+
+.details{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.details h1{
+    font-size: 3.95em;
+    color: lightseagreen;
+    text-shadow: 2px 10px 20px black;
+}
+
+.details h2{
+    text-transform: capitalize;
+    color: #fff;
+    text-shadow: 2px 10px 20px black;
+}
+
+.details h2 span:nth-child(1){
+    color: yellow;
+    text-shadow: 2px 10px 20px black;
+}
+
+.details h2 span:nth-child(2){
+    color: palevioletred	;
+    text-shadow: 2px 10px 20px black;	
+    }
+
+
+@keyframes animate{
+    0%,100%{
+        background-image: url(coding2.jpeg);
+        
+    }
+    25%{
+        background-image: url(Flowers.png);
+    }
+    50%{
+        background-image: url(Desert.png);
+    }
+    75%{
+        background-image: url(sunset.png);
+    }
+}
+
+.article1 {
+    max-height: 700px;
+    position: static;
+    display: inline-block;
+    padding-left: 200px;
+    padding-right: 100px;
+    top: 10px;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.2em;
+    font-family: 'Open Sans Condensed';
+    max-width: 1000px;
+    background-size: cover;
+}
+
+.zoom-encrpytioninfo {
+font-style: italic;
+font-size: 1.1em;
+color: black;
+padding-left: 30px;
+}
+.articleheading1 {
+font-size: 1.3em;
+text-align: 100px;
+border-bottom: 1px solid transparent;
+transition: border-bottom 0.75s;
+
+}
+
+
+.articleheading1 a {
+ color:black ;
+ text-decoration: none;
+ transition: color 0.75s;
+ top: 0px;
+
+}
+.articleheading1:hover{
+    border-bottom: 1px solid black ;
+}
+
+.articleheading1 a:hover{
+color:black;
+top: 0px;
+ }
+
+ .readmore {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.75s;
+ }
+
+ .readmore a {
+    color:#8a8a8a;
+    text-decoration: none;
+    transition: color 0.75s;
+ }
+ .readmore:hover {
+    border-bottom: 1px solid black ;
+ }
+
+ .readmore a:hover {
+    color: black;
+ }
+
+ .image-portfolio-wrapper1 {
+    padding-top: 10px;
+ }
+
+ .blackhole-info {
+    font-style: italic;
+    font-size: 1.1em;
+    padding-left: 30px;
+    color: black;
+    }
+
+.topbutton {
+       position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: black;
+        text-align: center;
+        padding-top: 12px;
+        line-height: 50px;
+        font-size: 22px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    * {
+        box-sizing: border-box;
+      }
+      
+      /* Style inputs */
+      input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      
+      /* Style the container/contact section */
+      .contact-container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 10px;
+      }
+      
+      /* Create two columns that float next to eachother */
+      .contact-column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px;
+      }
+      
+      /* Clear floats after the columns */
+      .contact-row:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .contactus-img {
+        padding-top: 12px;
+       
+      }
+      
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .contact-column, input[type=submit] {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+      
+.contactus-heading {
+text-align: left;
+color: black;
+border-bottom: 3px solid lightseagreen;
+text-shadow: 2px 10px 20px black; ;
+}
+.two-column-wrapper{
+    display: flex;
+
+}
+
+.profile-image-wrapper img {
+   
+    padding-left: 100px;
+     padding-top: 90px;
+}
+
+.profile-content-wrapper {
+    padding-top: 95px;
+    padding-left: 90px;
+    color: #474747;
+    font-size: 16px;
+}
