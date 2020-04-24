@@ -63,12 +63,12 @@ body{
 }
 
 .nav-link-wrapper {
-
     height: 22px ;
+}
+.nav-link-underline {
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s;
 }
-
 .nav-link-wrapper a {
  color: #8a8a8a ;
  text-decoration: none;
@@ -76,7 +76,7 @@ body{
  top: 0px;
 }
 
-.nav-link-wrapper:hover{
+.nav-link-underline:hover{
 border-bottom: 1px solid black ;
 top: 0px;
 }
