@@ -479,7 +479,7 @@ text-shadow: 2px 10px 20px black; ;
   nav {
     display: none;
   }
-  @media (max-width: 960px) {
+  @media (max-width: 650px) {
     .nav-wrapper{ 
         display: none; 
       }
