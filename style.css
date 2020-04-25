@@ -453,11 +453,11 @@ text-shadow: 2px 10px 20px black; ;
   
   #menu
   {
-    position: absolute;
+    position: fixed;
     width: 150px;
     height: 500px;
     box-shadow: 0 0 10px #85888C;
-    margin: -50px 0 0 -50px;
+    margin: -65px 0 0 -65px;
     padding: 50px;
     padding-top: 125px;
     background-color: lightseagreen;
@@ -479,7 +479,7 @@ text-shadow: 2px 10px 20px black; ;
   nav {
     display: none;
   }
-  @media (max-width: 960px) {
+  @media (max-width: 650px) {
     .nav-wrapper{ 
         display: none; 
       }
