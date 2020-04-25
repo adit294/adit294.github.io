@@ -4,12 +4,11 @@ scroll-behavior: smooth;
 body{
     margin: 0px;
     padding: 0px;
-    font-family: 'Baloo Bhaina 2','sans-serif';   
+    font-family: 'Baloo Bhaina 2','sans-serif'; 
 }
 
 .container{
- display: grid;
-
+ display: grid; 
 }
 .images-wrapper{
     position: fixed;
