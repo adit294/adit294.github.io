@@ -356,6 +356,7 @@ text-shadow: 2px 10px 20px black; ;
 {
    .article1{
        zoom:1.5;
+       font-size: 2em;
        padding-left: 10px;
    }
 
