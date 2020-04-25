@@ -352,7 +352,7 @@ text-shadow: 2px 10px 20px black; ;
     background: linear-gradient(90deg,#ff8a00,#e52e71);
  
 }
-@media screen and (max-width: 800px) 
+@media screen and (max-width: 650px) 
 {
    .article1{
        zoom:1.5;
