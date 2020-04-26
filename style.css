@@ -403,8 +403,8 @@ text-shadow: 2px 10px 20px black; ;
   #menuToggle input
   {
     display: flex;
-    width: 40px;
-    height: 32px;
+    width: 80px;
+    height: 52px;
     position: absolute;
     cursor: pointer;
     opacity: 0;
