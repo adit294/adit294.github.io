@@ -353,7 +353,7 @@ text-shadow: 2px 10px 20px black; ;
     background: linear-gradient(90deg,#ff8a00,#e52e71);
  
 }
-@media screen and (max-width: 600px) 
+@media screen and (max-width: 650px) 
 {
    .article1{
     max-height: 800px;
@@ -504,7 +504,7 @@ text-shadow: 2px 10px 20px black; ;
         display: grid;
      }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 650px) {
     .profile-image-wrapper img{
         padding-left: 10px;
       }
