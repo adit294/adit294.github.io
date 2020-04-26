@@ -533,7 +533,7 @@ text-shadow: 2px 10px 20px black; ;
         font-size: 1.3em;
       }
     }
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 540px) {
       .profile-image-wrapper img{
           padding-left: 10px;
         }
