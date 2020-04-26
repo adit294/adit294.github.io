@@ -352,7 +352,7 @@ text-shadow: 2px 10px 20px black; ;
     background: linear-gradient(90deg,#ff8a00,#e52e71);
  
 }
-@media screen and (max-width: 650px) 
+@media screen and (max-width: 920px) 
 {
    .article1{
     max-height: 800px;
@@ -485,7 +485,7 @@ text-shadow: 2px 10px 20px black; ;
   nav {
     display: none;
   }
-  @media (max-width: 650px) {
+  @media (max-width: 520px) {
     .nav-wrapper{ 
         display: none; 
       }
