@@ -178,7 +178,7 @@ color: whitesmoke;
     background-size: cover;
 }
 .paddingforarticles {
-  padding-top: 100px;
+  padding-top: 130px;
 }
 
 .zoom-encrpytioninfo {
@@ -388,10 +388,13 @@ text-shadow: 2px 10px 20px black; ;
 
   #menuToggle {
     display: flex;
+    height: 78px;
     flex-direction: column;
-    position: relative;
-    top: 25px;
-    left: 25px;
+    position: fixed;
+    background-color:#585858;
+    width: 100%;
+    top: 0px;
+    left: 0px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -411,6 +414,8 @@ text-shadow: 2px 10px 20px black; ;
   #menuToggle span
   {
     display: flex;
+    top:20px;
+    left: 20px;
     width: 60px;
     height: 12px;
     margin-bottom: 5px;
@@ -470,7 +475,7 @@ text-shadow: 2px 10px 20px black; ;
   #menu li
   {
     padding: 20px 0;
-    padding-left:10px ;
+    padding-left:30px ;
   }
   
   #menuToggle input:checked ~ ul
