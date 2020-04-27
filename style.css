@@ -369,10 +369,10 @@ text-shadow: 2px 10px 20px black; ;
     padding-bottom: 30px;
 }
 }
-@media screen and (max-width: 536px) 
+@media screen and (max-width: 580px) 
 {
    .article1{
-    max-height: 1300px;
+    max-height: 1200px;
     min-height: 100%;
     font-size: 2em;
     max-width: 100%;
