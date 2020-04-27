@@ -385,6 +385,14 @@ text-shadow: 2px 10px 20px black; ;
     padding-bottom: 30px;
 }
 }
+@media screen and (max-width: 1140px) 
+{
+   .article1{
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 2%;
+   }
+}
 
 #menu a {
     text-decoration: none;
