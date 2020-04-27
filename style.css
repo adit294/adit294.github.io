@@ -360,7 +360,7 @@ text-shadow: 2px 10px 20px black; ;
     min-height: 100%;
     font-size: 2em;
     max-width: 90%;
-    padding-left: 10px;
+    padding-left: 100px;
     padding-right: 3%;
    }
 
@@ -369,7 +369,7 @@ text-shadow: 2px 10px 20px black; ;
     padding-bottom: 30px;
 }
 }
-@media screen and (max-width: 580px) 
+@media screen and (max-width: 540px) 
 {
    .article1{
     max-height: 1300px;
