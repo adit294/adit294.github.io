@@ -361,6 +361,7 @@ text-shadow: 2px 10px 20px black; ;
     font-size: 2em;
     max-width: 90%;
     padding-left: 10px;
+    padding-right: 5%;
    }
 
    .zoomtest {
@@ -376,7 +377,7 @@ text-shadow: 2px 10px 20px black; ;
     font-size: 2em;
     max-width: 90%;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 50%;
    }
 
    .zoomtest {
