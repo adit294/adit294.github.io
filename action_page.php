@@ -16,4 +16,4 @@ mail($mailTo, $subject, $txt, $headers or die("Error!"));
 header("Location: action_page.php?mailsent");
 echo "Thank You!";
 }
-
+?>
