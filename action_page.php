@@ -7,7 +7,7 @@ $email = $_POST['email'];
 $message = $_POST['subject'];
 $countryfrom = $_POST['country'];
 
-$mailTo = "hi@aditagrawl.com";
+$mailTo = "hi@aditagarwal.com";
 $subject = "Contact Form";
 $headers = "From: ".$email;
 $txt ="You have received an email from ".$name.".\n\n".$message;
