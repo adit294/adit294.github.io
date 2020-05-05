@@ -379,7 +379,10 @@ text-shadow: 2px 10px 20px black; ;
     padding-left: 10px;
     padding-right: 2%;
    }
-
+   .article1 img{
+    min-width: 90%;
+    min-height: 30%;
+   }
    .zoomtest {
     zoom: 0.6;
     padding-bottom: 30px;
@@ -391,6 +394,10 @@ text-shadow: 2px 10px 20px black; ;
     max-width: 100%;
     padding-left: 5px;
     padding-right: 2%;
+   }
+   .article1 img{
+    min-width: 90%;
+    min-height: 30%;
    }
 }
 
