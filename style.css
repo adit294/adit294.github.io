@@ -162,7 +162,9 @@ color: whitesmoke;
         background-image: url(sunset.png);
     }
 }
-
+.mydetailsphone {
+  display: none;
+  }
 .article1 {
     max-height: 700px;
     min-height: 700px;
@@ -368,6 +370,24 @@ text-shadow: 2px 10px 20px black; ;
     zoom: 0.6;
     padding-bottom: 30px;
 }
+.article1 img{
+  min-width: 90%;
+  min-height: 30%;
+ }
+.mydetailsphone {
+  display: grid;
+  padding-top: 60%;
+  text-align: center;
+  }
+  .details {
+    display: none;
+  }
+.mydetailsphone h1 {
+  color: lightseagreen;
+  }
+  .mydetailsphone h2 {
+    color:yellow;
+  }
 }
 @media screen and (max-width: 580px) 
 {
@@ -387,6 +407,20 @@ text-shadow: 2px 10px 20px black; ;
     zoom: 0.6;
     padding-bottom: 30px;
 }
+.mydetailsphone {
+  display: grid;
+  padding-top: 60%;
+  text-align: center;
+  }
+  .details {
+    display: none;
+  }
+.mydetailsphone h1 {
+  color: lightseagreen;
+  }
+  .mydetailsphone h2 {
+    color:yellow;
+  }
 }
 @media screen and (max-width: 1140px) 
 {
