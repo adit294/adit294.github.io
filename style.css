@@ -575,9 +575,9 @@ text-shadow: 2px 10px 20px black; ;
   }
   @media screen and (max-width: 650px) {
     .profile-image-wrapper img{
-        padding-left: 15%;
         padding-top: 20%;
-        text-align: center;
+        display: block;
+        margin: 0 auto;
         height: 700px;
         width: auto;
       }
@@ -602,10 +602,10 @@ text-shadow: 2px 10px 20px black; ;
     }
     @media screen and (max-width: 580px) {
       .profile-image-wrapper img{
-        padding-left: 15%;
         padding-top: 20%;
+        display: block;
         font-size: 2em;
-        text-align: center;
+        margin: 0 auto;
         height: 700px;
         width: auto;
       }
