@@ -577,6 +577,7 @@ text-shadow: 2px 10px 20px black; ;
     .profile-image-wrapper img{
         padding-top: 20%;
         display: block;
+        padding-right: 10%;
         margin: 0 auto;
         height: 700px;
         width: auto;
@@ -604,6 +605,7 @@ text-shadow: 2px 10px 20px black; ;
       .profile-image-wrapper img{
         padding-top: 20%;
         display: block;
+        padding-right: 10%;
         font-size: 2em;
         margin: 0 auto;
         height: 700px;
