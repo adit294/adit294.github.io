@@ -377,7 +377,7 @@ text-shadow: 2px 10px 20px black; ;
 .mydetailsphone {
   display: grid;
   padding-top: 50%;
-  font-size: 1.3em;
+  font-size: 2em;
   text-align: center;
   }
   .details {
@@ -410,7 +410,7 @@ text-shadow: 2px 10px 20px black; ;
 }
 .mydetailsphone {
   display: grid;
-  font-size: 1.3em;
+  font-size: 2em;
   padding-top: 50%;
   text-align: center;
   }
