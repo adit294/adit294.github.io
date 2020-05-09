@@ -180,6 +180,9 @@ color: whitesmoke;
     max-width: 1000px;
     background-size: cover;
 }
+.articleunderline h1 {
+  text-decoration: underline;
+}
 .paddingforarticles {
   padding-top: 130px;
 }
@@ -191,6 +194,8 @@ font-style: italic;
 font-size: 1.1em;
 color: black;
 padding-left: 30px;
+border-left-style: solid;
+border-left-color: black;
 }
 .articleheading1 {
 font-size: 1.3em;
