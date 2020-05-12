@@ -10,7 +10,7 @@ html, body {
   
   @media screen and (max-width: 900px) 
   {
-     html{
+     body{
          padding-left: 15%;
          padding-top: 20%;
      }
