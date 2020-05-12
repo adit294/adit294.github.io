@@ -5,11 +5,3 @@ html, body {
   canvas {
     display: block;
   }
-  @media screen and (max-width: 1140px) 
-  {
-     .canvas{
-      max-width: 100%;
-      min-width: 90%;
-      min-height: auto;
-     }
-  }
