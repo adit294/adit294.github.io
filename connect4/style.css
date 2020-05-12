@@ -6,7 +6,7 @@ html, body {
     display: block;
   }
   
-  @media screen and (max-width: 1140px) 
+  @media screen and (max-width: 700px) 
   {
      html{
          padding-left: 15%;
