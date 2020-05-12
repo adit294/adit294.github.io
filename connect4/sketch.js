@@ -15,8 +15,8 @@ let board =[
   
   let currentPlayer = human;
   
-  let beep;
       let x1 = null;
+      let y1 = null;
       let x2 = null;
       let y2 = null;
       let beep;
