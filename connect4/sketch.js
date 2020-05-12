@@ -24,7 +24,7 @@ let board =[
   let env;
   
   function setup() {
-    createCanvas(windowWidth/1.8, windowHeight/1.2);
+    createCanvas(windowWidth/1.3, windowHeight/1.2);
     w = width / 7;
     h = height / 6;
     env = new p5.Envelope();
