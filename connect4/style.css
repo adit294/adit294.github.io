@@ -6,3 +6,10 @@ html, body {
     display: block;
   }
   
+  @media screen and (max-width: 1140px) 
+  {
+     html{
+         padding-left: 15%;
+         padding-top: 20%;
+     }
+  }
