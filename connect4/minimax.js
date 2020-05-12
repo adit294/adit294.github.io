@@ -8,7 +8,7 @@ function bestMove(maxDepth) {
           y++;
   
         board[y][x] = ai;
-        let score = minimax(board, 0, -Infinity, Infinity, maxDepth, false);
+        let score = minimax(board, 0, -Infinity, Infinity, 7, false);
         board[y][x] = '';
   
         if(score > bestScore) {
@@ -49,7 +49,7 @@ function bestMove(maxDepth) {
           while((y<5) && (board[y+1][x] == ''))
             y++;
           board[y][x] = ai;
-          let score = minimax(board, depth+1, alpha, beta, maxDepth, false);
+          let score = minimax(board, depth+1, alpha, beta, 7, false);
           board[y][x] = '';
           score/=depth+1;
           bestScore = max(score, bestScore);
@@ -68,7 +68,7 @@ function bestMove(maxDepth) {
           while((y<5) && (board[y+1][x] == ''))
             y++;
           board[y][x] = human;
-          let score = minimax(board, depth+1, alpha, beta, maxDepth, true);
+          let score = minimax(board, depth+1, alpha, beta, 7, true);
           board[y][x] = '';
           score/= depth+1;
           bestScore = min(score, bestScore);

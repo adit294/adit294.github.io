@@ -15,16 +15,14 @@ let board =[
   
   let currentPlayer = human;
   
-  let x1 = null;
-  let y1 = null;
-  let x2 = null;
-  let y2 = null;
-  
   let beep;
-  let env;
-  
+      let x1 = null;
+      let x2 = null;
+      let y2 = null;
+      let beep;
+      let env;
   function setup() {
-    createCanvas(windowWidth/1.3, windowHeight/1.2);
+    createCanvas(700,500);
     w = width / 7;
     h = height / 6;
     env = new p5.Envelope();
@@ -77,7 +75,7 @@ let board =[
         let max_depth = calc_depth(countDispo, 1e13);        
         if(checkWinner() == null) {
           currentPlayer = ai;
-          sleep(30).then(() => {
+          sleep(150).then(() => {
             bestMove(max_depth);
             env.play(beep);
           });
