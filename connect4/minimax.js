@@ -37,7 +37,6 @@ function bestMove(maxDepth) {
       let score = scores[result];
       return score;
     }
-   
     if(depth > maxDepth)
         return 0;
     

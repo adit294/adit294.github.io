@@ -15,14 +15,15 @@ let board =[
   
   let currentPlayer = human;
   
-      let x1 = null;
-      let y1 = null;
-      let x2 = null;
-      let y2 = null;
-      let beep;
-      let env;
+  let x1 = null;
+  let y1 = null;
+  let x2 = null;
+  let y2 = null;
+  
+  let beep;
+  let env;  
   function setup() {
-    createCanvas(700,500);
+    createCanvas(700, 500);
     w = width / 7;
     h = height / 6;
     env = new p5.Envelope();
@@ -70,12 +71,11 @@ let board =[
             if(board[y][x] == '')
               countDispo++;
           }
-        }
-                
-        let max_depth = calc_depth(countDispo, 1e13);        
+        } 
+        let max_depth = calc_depth(countDispo, 1e13);
         if(checkWinner() == null) {
           currentPlayer = ai;
-          sleep(150).then(() => {
+          sleep(100).then(() => {
             bestMove(max_depth);
             env.play(beep);
           });
@@ -87,8 +87,6 @@ let board =[
   function checkWinner() {
     
     let x, y;
-    
-
     for(x=0; x<7; x++) {
       for(y=0; y<3; y++) {
         if(board[y][x] != '') {
@@ -101,8 +99,6 @@ let board =[
         }
       }
     }
-    
-
     for(x=0; x<4; x++) {
       for(y=0; y<6; y++) {
         if(board[y][x] != '') {
@@ -115,7 +111,6 @@ let board =[
         }
       }
     }
-
     for(x=0; x<4; x++) {
       for(y=3; y<6; y++) {
         if(board[y][x] != '') {
@@ -128,7 +123,6 @@ let board =[
         }
       }
     }  
-
     for(x=0; x<4; x++) {
       for(y=0; y<3; y++) {
         if(board[y][x] != '') {
@@ -141,7 +135,6 @@ let board =[
         }
       }
     }
-    
     for(let x=0; x<7; x++) {
         if(board[0][x] == '')
           return null;
@@ -158,9 +151,9 @@ let board =[
     } else {
       background(190, 100, 90);
     }
+    
     let w = width/7;
     let h = height/6;
-
     strokeWeight(1);
     for(let x=0; x<=7; x++)
       line(w*x, 0, w*x, height);
@@ -195,7 +188,7 @@ let board =[
         stroke(240, 40,40, 150);
         strokeWeight(10);
         line(x1*w+w/2, y1*h+h/2, x2*w+w/2, y2*h+h/2);
-        resultP.html(` ${result} Wins!`);
+        resultP.html(`${result} Wins!`);
       }
     }
   }
