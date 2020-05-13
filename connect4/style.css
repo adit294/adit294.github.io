@@ -2,14 +2,13 @@ html, body {
     margin: 0;
     padding: 0;
     padding-top: 7px;
-    padding-left: 15px;
+    padding-left:15px;
   }
   canvas {
     display: block;
   }
   
   .button-wrapper  {
-    right:0 ;
     padding-bottom: 10px;
   }
   
