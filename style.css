@@ -685,4 +685,8 @@ text-shadow: 2px 10px 20px black; ;
             height: 83px;
             border-radius: 50%;
           }
+          .social-icons {
+            margin: auto;
+            width: 40%;
+          }
         }
