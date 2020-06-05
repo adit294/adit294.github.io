@@ -680,7 +680,7 @@ text-shadow: 2px 10px 20px black; ;
         @media screen and (max-width: 650px) {
           .fa {
             padding: 20px;
-            font-size: 35px;
+            font-size: 32px;
             width: 83px;
             height: 83px;
             border-radius: 50%;
