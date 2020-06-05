@@ -634,37 +634,46 @@ text-shadow: 2px 10px 20px black; ;
         }
       }
   
-.fa:hover {
-  opacity: 0.7;
-  text-decoration: none;
-}
-.fa-linkedin {
-background: #007bb5;
-color: white;
-text-decoration: none;
-}
-.fa-linkedin:hover {
-background: #007bb5;
-color: white;
-opacity: 0.8;
-}
-.fa-github {
-background: black;
-color: white;
-text-decoration: none;
-}
-.fa-medium {
-background: black;
-color: gainsboro;
-text-decoration: none;
-}
-.fa-github:hover {
-background: black;
-color: white;
-opacity: 0.8;
-}
-.fa-medium:hover {
-background: black;
-color: gainsboro;
-opacity: 0.8;  
-}    
+      .fa {
+        padding: 10px;
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        }
+    
+        .fa:hover {
+            opacity: 0.7;
+            text-decoration: none;
+        }
+        .fa-linkedin {
+          background: #007bb5;
+          color: white;
+          text-decoration: none;
+        }
+        .fa-linkedin:hover {
+          background: #007bb5;
+          color: white;
+          opacity: 0.8;
+        }
+        .fa-github {
+          background: black;
+          color: white;
+          text-decoration: none;
+        }
+        .fa-medium {
+          background: black;
+          color: gainsboro;
+          text-decoration: none;
+        }
+        .fa-github:hover {
+          background: black;
+          color: white;
+          opacity: 0.8;
+        }
+        .fa-medium:hover {
+          background: black;
+          color: gainsboro;
+          opacity: 0.8;  
+        }
