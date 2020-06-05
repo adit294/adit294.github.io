@@ -677,3 +677,10 @@ text-shadow: 2px 10px 20px black; ;
           color: gainsboro;
           opacity: 0.8;  
         }
+        @media screen and (max-width: 580px) {
+          .fa {
+            padding: 20px;
+            font-size: 32px;
+            width: 70px;
+          }
+        }
