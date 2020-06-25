@@ -3,6 +3,9 @@ html, body {
     padding: 0;
     padding-top: 7px;
     padding-left:15px;
+    max-width: 80%;
+    font-family: 'Baloo Bhaina 2','sans-serif'; 
+    font-size: 1.05em;
   }
   canvas {
     display: block;
