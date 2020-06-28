@@ -8,15 +8,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
     <meta charset="utf-8" />
 
   </head>
   <body>
+    <div class="rules-wrapper">
+    <div class="rules-tooggle">
+    <div class="rules-btn-wrapper">
+    <button type="button" class="btn btn-primary btn-sm">Rules</button></a>
+    <br><br><br>
+  </div>
+  <div class="dropdown-toggle">
+    <i class="fa fa-caret-square-o-down fa-4x" aria-hidden="true"></i>
+  </div>
+</div>
+    <div class="connect4rules">
     <p> The aim for both players is to make a straight line of four own pieces; the line can be vertical, horizontal or diagonal.
       The human player plays first followed by the AI robot which is based on concepts and algorithms like machine learning and minimax.
       Moves are made alternatively, one by turn. Moves involve placing new pieces on the board; pieces slide downwards from upper holes, falling down to the last row or piling up on the last piece introduced in the same column. So, in every turn the introduced piece may be placed at most on seven different squares.
       The winner is the first player who gets a straight line made with four own pieces and no gaps between them.
  </p>
+</div>
+</div>
   <div class="button-wrapper">
       <a href="https://aditagarwal.com/connect4"><button type="button" class="btn btn-primary btn-lg">Play Again</button></a>
   </div>
