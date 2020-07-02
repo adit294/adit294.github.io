@@ -1,0 +1,76 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
+	<script src="p5.speech.js"></script>
+	<script>
+
+	var myVoice = new p5.Speech();
+	myVoice.onLoad = voiceReady;
+	var menuLoaded = 0;
+	var label, input, checkbox, speakbutton, vslider, rslider, pslider;
+
+	function setup()
+	{
+		input = createInput("Test!");
+		input.style("width", 400);
+  		input.position(20, 65);
+		checkbox = createInput(0, 1, 0);
+		checkbox.attribute("type", "checkbox");
+		checkbox.style("width", "15px");
+		checkbox.style("height", "15px");
+  		checkbox.position(100, 100);
+		speakbutton = createButton('Speak');
+  		speakbutton.position(20, 100);
+  		speakbutton.mousePressed(doSpeak);
+  		vslider = createSlider(0., 100., 100.);
+  		vslider.position(20, 140);
+  		vslider.mouseReleased(setVolume);
+  		rslider = createSlider(10., 200., 100.);
+  		rslider.position(20, 160);
+  		rslider.mouseReleased(setRate);
+  		pslider = createSlider(1., 200., 100.);
+  		pslider.position(20, 180);
+  		pslider.mouseReleased(setPitch);
+		label = createDiv("Enter text below:");
+		label.position(20, 40);
+		label = createDiv("Check to allow interrupting with new message(Recommended)");
+		label.position(125, 100);
+		label = createDiv("Volume");
+		label.position(160, 140);
+		label = createDiv("Rate");
+		label.position(160, 160);
+		label = createDiv("Pitch");
+		label.position(160, 180);
+
+		myVoice.speak(input.value());
+
+	}
+
+	function setVolume()
+	{
+		myVoice.setVolume(vslider.value()/100.);
+	}
+	function setRate()
+	{
+		myVoice.setRate(rslider.value()/100.);
+	}
+	function setPitch()
+	{
+		myVoice.setPitch(pslider.value()/100.);
+	}
+
+
+
+	function doSpeak()
+	{
+		myVoice.interrupt = checkbox.elt.checked;
+		myVoice.setVoice('Moira');
+		myVoice.speak(input.value()); 
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>
