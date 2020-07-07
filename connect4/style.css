@@ -22,4 +22,7 @@ html, body {
          padding-top: 20%;
      }
   }
+  .rules-tooggle {
+    display:none;
+  }
   
