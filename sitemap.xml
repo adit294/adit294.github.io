@@ -10,11 +10,25 @@
   <loc>https://aditagarwal.com/</loc>
   <lastmod>2020-08-06T13:03:52+00:00</lastmod>
   <priority>1.00</priority>
+            <image:image>
+        <image:loc>https://aditagarwal.com/myphoto1.png</image:loc>
+        <image:loc>https://bit.ly/31tW4NX</image:loc>
+        <image:loc>https://miro.medium.com/max/3150/2*zsDYQX3dn6AlvmU--gJN0g.png</image:loc>
+        <image:loc>https://miro.medium.com/fit/c/128/128/2*zsDYQX3dn6AlvmU--gJN0g.png</image:loc>
+        <image:title></image:title>
+        </image:image>
 </url>
 <url>
   <loc>https://aditagarwal.com/index</loc>
   <lastmod>2020-08-06T13:03:52+00:00</lastmod>
   <priority>0.80</priority>
+            <image:image>
+        <image:loc>https://aditagarwal.com/myphoto1.png</image:loc>
+        <image:loc>https://bit.ly/31tW4NX</image:loc>
+        <image:loc>https://miro.medium.com/max/3150/2*zsDYQX3dn6AlvmU--gJN0g.png</image:loc>
+        <image:loc>https://miro.medium.com/fit/c/128/128/2*zsDYQX3dn6AlvmU--gJN0g.png</image:loc>
+        <image:title></image:title>
+        </image:image>
 </url>
 <url>
   <loc>https://aditagarwal.com/about</loc>
@@ -22,7 +36,11 @@
   <priority>0.80</priority>
           <image:image>
         <image:loc>https://aditagarwal.com/myphoto1.png</image:loc>
+        <image:loc>https://bit.ly/31tW4NX</image:loc>
+        <image:loc>https://miro.medium.com/fit/c/128/128/2*zsDYQX3dn6AlvmU--gJN0g.png</image:loc>
+        <image:loc>https://miro.medium.com/max/3150/2*zsDYQX3dn6AlvmU--gJN0g.png</image:loc>
         <image:title></image:title>
+        </image:image>
 </url>
 <url>
   <loc>https://aditagarwal.com/articles</loc>
@@ -42,6 +60,7 @@
   <loc>https://aditagarwal.com/index.html</loc>
   <lastmod>2020-08-06T13:03:52+00:00</lastmod>
   <priority>0.80</priority>
+
 </url>
 <url>
   <loc>https://aditagarwal.com/about.html</loc>
@@ -49,6 +68,9 @@
   <priority>0.80</priority>
         <image:image>
         <image:loc>https://aditagarwal.com/myphoto1.png</image:loc>
+        <image:loc>https://bit.ly/31tW4NX</image:loc>
+        <image:loc>https://miro.medium.com/fit/c/128/128/2*zsDYQX3dn6AlvmU--gJN0g.png</image:loc>
+        <image:loc>https://miro.medium.com/max/3150/2*zsDYQX3dn6AlvmU--gJN0g.png</image:loc>
         <image:title></image:title>
       </image:image>
 </url>
