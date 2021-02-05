@@ -1,9 +1,9 @@
 function bestMove(maxDepth) {
-    let bestScore = -Infinity;
+    let bestScore = -Infinity; // Ai turn
     let move=null;
     for(let x=0; x<7; x++) {
       let y = 0;
-      if(board[y][x] == '') {
+      if(board[y][x] == '') { //column playable? 
         while((y<5) && (board[y+1][x] == ''))
           y++;
   
@@ -32,7 +32,7 @@ function bestMove(maxDepth) {
   }
   
   function minimax(board, depth, alpha, beta, maxDepth, isMaximizing) {
-    let result = checkWinner();
+    let result = checkWinner(); // result check
     if(result != null) {
       let score = scores[result];
       return score;

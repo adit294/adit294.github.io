@@ -19,7 +19,7 @@ let board =[
   let y1 = null;
   let x2 = null;
   let y2 = null;
-  
+   
   let beep;
   let env;  
   function setup() {
