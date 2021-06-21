@@ -25,3 +25,6 @@ html, body {
   .rules-tooggle {
     display:none;
   }
+  .rules-wrapper {
+    margin-top: 100px;
+  }
