@@ -19,12 +19,12 @@ html, body {
   {
      body{
          padding-left: 15%;
-         padding-top: 45%;
+         padding-top: 50%;
      }
   }
   .rules-tooggle {
     display:none;
   }
   .rules-wrapper {
-    padding-top: 15%;
+    padding-top: 10%;
   }
