@@ -166,8 +166,8 @@ color: whitesmoke;
   display: none;
   }
 .article1 {
-    max-height: 650px;
-    min-height: 650px;
+    max-height: fit-content;
+    min-height: fit-content;
     position: static;
     display: inline-block;
     padding-left: 200px;
