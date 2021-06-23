@@ -406,8 +406,7 @@ text-shadow: 2px 10px 20px black; ;
 @media screen and (max-width: 580px) 
 {
    .article1{
-    max-height: 1320px;
-    min-height: 100%;
+
     font-size: 2em;
     max-width: 100%;
     padding-left: 10px;
