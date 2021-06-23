@@ -365,7 +365,7 @@ text-shadow: 2px 10px 20px black; ;
 @media screen and (max-width: 650px) 
 {
    .article1{
-    max-height: 30%;
+    max-height: 15%;
 
     font-size: 2em;
     max-width: 90%;
@@ -379,7 +379,7 @@ text-shadow: 2px 10px 20px black; ;
 }
 .scraper-article {
 
-  font-size: 0.5em;
+  font-size: 1em;
   max-width: 90%;
   padding-left: 10px;
   padding-right: 3%;
@@ -408,7 +408,7 @@ text-shadow: 2px 10px 20px black; ;
 @media screen and (max-width: 580px) 
 {
    .article1{
-    max-height: 30%;
+    max-height: 15%;
     font-size: 2em;
     max-width: 100%;
     padding-left: 10px;
