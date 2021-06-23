@@ -377,6 +377,14 @@ text-shadow: 2px 10px 20px black; ;
     zoom: 0.6;
     padding-bottom: 30px;
 }
+.scraper-article {
+  max-height: 1200px;
+  min-height: 100%;
+  font-size: 2em;
+  max-width: 90%;
+  padding-left: 10px;
+  padding-right: 3%;
+}
 .article1 img{
   min-width: 90%;
   min-height: 30%;
