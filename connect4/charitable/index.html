@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DecideToDonate</title>
+<link rel="stylesheet" href="styles.css">
+<style id="applicationStylesheet" type="text/css">
+    .mediaViewInfo {
+        --web-view-name: iPhone X, XS, 11 Pro – 1;
+        --web-view-id: iPhone_X_XS_11_Pro__1;
+        --web-scale-on-resize: true;
+        --web-enable-deep-linking: true;
+    }
+    :root {
+        --web-view-ids: iPhone_X_XS_11_Pro__1;
+    }
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+<script src="https://d3js.org/d3.v2.min.js?2.8.1"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+var charities = []
+var dataset_main = []
+var selected_charities =[]
+function getCharities(regioninfo,cause){
+    charities = []
+    d3.csv("/charities_list_clean.csv", function(dataset) {
+        dataset_main = dataset
+        console.log("regioninfo,cause",regioninfo,cause);
+        for (var i = 0; i < dataset.length; i++) {
+            if (dataset[i].region && dataset[i].Cause) {
+                if(dataset[i].region == regioninfo && dataset[i].Cause == cause){
+                    charities.push(dataset[i].CharityID);
+                }
+            }
+        }
+        console.log(charities);
+        populateCards()
+        window.location.hash = "jumphere";
+    });
+}
+
+function populateCards() {
+    console.log(dataset_main);
+    for (var i = 0; i < 6; i++) {
+        var result = dataset_main.filter(obj => obj.CharityID == charities[i])
+        if (result[0]) {
+            console.log(result[0].imgid);
+            logo_src = ("/Logos/page2_img_"+result[0].imgid+".png");
+            document.getElementById('UrbanFoodInteractiveGrid').children[i].value = ""+charities[i]
+            document.getElementById('UrbanFoodInteractiveGrid').children[i].children[0].value = ""+charities[i]
+            document.getElementById('UrbanFoodInteractiveGrid').children[i].children[1].src = logo_src
+        }
+
+    }
+}
+// populateCards()
+function display(value) {
+if (value ==-1) {
+    return
+}
+var result = dataset_main.filter(obj => obj.CharityID == value)
+founded_text = "Founded "+result[0].Inception_Date
+last_active_text = ""
+document.getElementById('descriptiontext').innerHTML = founded_text+"<br>"+result[0].description
+}
+function show() {
+    let checkboxes =  document.querySelectorAll('input[type=checkbox]:checked')
+    console.log(checkboxes);
+    for (var i = 0; i < 3; i++) {
+        var result = dataset_main.filter(obj => obj.CharityID == checkboxes[i].value)
+        if (result[0]) {
+            console.log(result[0].imgid);
+            logo_src = ("/Logos/page2_img_"+result[0].imgid+".png");
+            let v = document.getElementById('money_text').value
+            let value_amount =Math.round(v/(checkboxes.length))
+            document.getElementsByClassName('cmoney2').value_amount = value_amount;
+            document.getElementsByClassName('cmoney2')[i].innerHTML = value_amount;
+            document.getElementsByClassName('cmoney1')[i].children[0].src = logo_src
+        }
+
+    }
+}
+
+function incrementValue(value)
+{
+    var abc= document.getElementsByClassName('cmoney2')[0].innerHTML;
+    var xyz= Math.round(parseInt(abc)+abc/20);
+    document.getElementsByClassName('cmoney2')[0].innerHTML = xyz
+    console.log(xyz);
+    var bcd = document.getElementsByClassName('cmoney2')[1].innerHTML;
+    var cde = document.getElementsByClassName('cmoney2')[2].innerHTML;
+    bcd=Math.round(parseInt(bcd)-abc/40);
+    cde=Math.round(parseInt(cde)-abc/40);
+	//bcd=Math.round(total-(abc+cde));
+	//cde=Math.round(total-(abc+bcd));
+    document.getElementsByClassName('cmoney2')[1].innerHTML = bcd;
+    document.getElementsByClassName('cmoney2')[2].innerHTML = cde;
+    
+}
+function decrementValue(value)
+{
+    //for (var i = 0; i < 3; i++) {
+    var abc= document.getElementsByClassName('cmoney2')[0].innerHTML;
+    var xyz= Math.round(parseInt(abc)-abc/20);
+    document.getElementsByClassName('cmoney2')[0].innerHTML = xyz
+    console.log(xyz);
+    var bcd = document.getElementsByClassName('cmoney2')[1].innerHTML;
+    var cde = document.getElementsByClassName('cmoney2')[2].innerHTML;
+    bcd=Math.round(parseInt(bcd)+abc/40);
+    cde=Math.round(parseInt(cde)+abc/40);
+	//bcd=Math.round(total-(abc+cde));
+	//cde=Math.round(total-(abc+bcd));
+    document.getElementsByClassName('cmoney2')[1].innerHTML = bcd;
+    document.getElementsByClassName('cmoney2')[2].innerHTML = cde;
+    //document.getElementsByClassName('number')[i].value = value;
+    //}
+}
+
+function incrementValue1(value)
+{
+    var abc= document.getElementsByClassName('cmoney2')[1].innerHTML;
+    var xyz= Math.round(parseInt(abc)+abc/20);
+    document.getElementsByClassName('cmoney2')[1].innerHTML = xyz
+    console.log(xyz);
+    var bcd = document.getElementsByClassName('cmoney2')[0].innerHTML;
+    var cde = document.getElementsByClassName('cmoney2')[2].innerHTML;
+    bcd=Math.round(parseInt(bcd)-abc/40);
+    cde=Math.round(parseInt(cde)-abc/40);
+	//bcd=Math.round(total-(abc+cde));
+	//cde=Math.round(total-(abc+bcd));
+    document.getElementsByClassName('cmoney2')[0].innerHTML = bcd;
+    document.getElementsByClassName('cmoney2')[2].innerHTML = cde;
+    
+}
+function decrementValue1(value)
+{
+
+    var abc= document.getElementsByClassName('cmoney2')[1].innerHTML;
+    var xyz= Math.round((abc)-abc/20);
+    document.getElementsByClassName('cmoney2')[1].innerHTML = xyz
+    console.log(xyz);
+    var bcd = document.getElementsByClassName('cmoney2')[0].innerHTML;
+    var cde = document.getElementsByClassName('cmoney2')[2].innerHTML;
+    bcd=Math.round(parseInt(bcd)+abc/40);
+    cde=Math.round(parseInt(cde)+abc/40);
+	//bcd=Math.round(total-(abc+cde));
+	//cde=Math.round(total-(abc+bcd));
+    document.getElementsByClassName('cmoney2')[0].innerHTML = bcd;
+    document.getElementsByClassName('cmoney2')[2].innerHTML = cde;
+    
+}
+function incrementValue2(value)
+{
+    var abc= document.getElementsByClassName('cmoney2')[2].innerHTML;
+    var xyz= Math.round(parseInt(abc)+abc/20);
+    document.getElementsByClassName('cmoney2')[2].innerHTML = xyz
+    console.log(xyz);
+    var bcd = document.getElementsByClassName('cmoney2')[0].innerHTML;
+    var cde = document.getElementsByClassName('cmoney2')[1].innerHTML;
+	var total = document.getElementById('money_text').value;
+    bcd=Math.round(parseInt(bcd)-abc/40);
+    cde=Math.round(parseInt(cde)-abc/40);
+	//bcd=Math.round(total-(abc+cde));
+	//cde=Math.round(total-(abc+bcd));
+    document.getElementsByClassName('cmoney2')[0].innerHTML = bcd;
+    document.getElementsByClassName('cmoney2')[1].innerHTML = cde;
+}
+function decrementValue2(value)
+{
+
+    var abc= document.getElementsByClassName('cmoney2')[2].innerHTML;
+    var xyz= Math.round((abc)-abc/20);
+    document.getElementsByClassName('cmoney2')[2].innerHTML = xyz
+    console.log(xyz);
+    var bcd = document.getElementsByClassName('cmoney2')[0].innerHTML;
+    var cde = document.getElementsByClassName('cmoney2')[1].innerHTML;
+    bcd=Math.round(parseInt(bcd)+abc/40);
+    cde=Math.round(parseInt(cde)+abc/40);
+	//bcd=Math.round(total-(abc+cde));
+	//cde=Math.round(total-(abc+bcd));
+    document.getElementsByClassName('cmoney2')[0].innerHTML = bcd;
+    document.getElementsByClassName('cmoney2')[1].innerHTML = cde;
+}
+
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+</head>
+<body>
+        <a href="#page2">jump link</a>
+
+<div id="iPhone_X_XS_11_Pro__1">
+    <div id="header">
+
+        <svg class="Rectangle_2">
+            <rect id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="375" height="86">
+            </rect>
+        </svg>
+        <div id="decidetodonatetoday">
+            <span>decidetodonate.today</span>
+        </div>
+        <svg class="Icon_metro-lines" viewBox="8.355 9.64 37.327 36.248">
+            <path id="Icon_metro-lines" d="M 10.22116661071777 14.81847190856934 L 43.81576156616211 14.81847190856934 C 44.84611511230469 14.81847190856934 45.68212890625 13.65869522094727 45.68212890625 12.22931861877441 C 45.68212890625 10.7999439239502 44.84611129760742 9.640167236328125 43.81576156616211 9.640167236328125 L 10.22116851806641 9.640167236328125 C 9.190816879272461 9.640167236328125 8.354803085327148 10.7999439239502 8.354803085327148 12.22931861877441 C 8.354803085327148 13.65869522094727 9.190816879272461 14.81847190856934 10.22116851806641 14.81847190856934 Z M 43.81576156616211 19.99677467346191 L 10.22116851806641 19.99677467346191 C 9.190816879272461 19.99677467346191 8.354803085327148 21.15655326843262 8.354803085327148 22.58592796325684 C 8.354803085327148 24.01530265808105 9.190816879272461 25.17508125305176 10.22116851806641 25.17508125305176 L 43.81576156616211 25.17508125305176 C 44.84611511230469 25.17508125305176 45.68212890625 24.01530265808105 45.68212890625 22.58592796325684 C 45.68212890625 21.15655326843262 44.84611129760742 19.99677467346191 43.81576156616211 19.99677467346191 Z M 43.81576156616211 30.35338401794434 L 10.22116851806641 30.35338401794434 C 9.190816879272461 30.35338401794434 8.354803085327148 31.51316261291504 8.354803085327148 32.94253540039062 C 8.354803085327148 34.37190246582031 9.190816879272461 35.53168487548828 10.22116851806641 35.53168487548828 L 43.81576156616211 35.53168487548828 C 44.84611511230469 35.53168487548828 45.68212890625 34.37190246582031 45.68212890625 32.94253540039062 C 45.68212890625 31.51316261291504 44.84611129760742 30.35338401794434 43.81576156616211 30.35338401794434 Z M 43.81576156616211 40.70999145507812 L 10.22116851806641 40.70999145507812 C 9.190816879272461 40.70999145507812 8.354803085327148 41.86977386474609 8.354803085327148 43.29914093017578 C 8.354803085327148 44.728515625 9.190816879272461 45.88829040527344 10.22116851806641 45.88829040527344 L 43.81576156616211 45.88829040527344 C 44.84611511230469 45.88829040527344 45.68212890625 44.728515625 45.68212890625 43.29914093017578 C 45.68212890625 41.86977386474609 44.84611129760742 40.70999145507812 43.81576156616211 40.70999145507812 Z">
+            </path>
+        </svg>
+    </div>
+    <section>
+        <div class="page1">
+
+            <svg class="Rectangle_1">
+                <rect id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="375" height="213">
+                </rect>
+            </svg>
+            <img id="page1_girl_gray" src="page1_girl_gray.png" srcset="page1_girl_gray.png 1x, page1_girl_gray@2x.png 2x" style="width:70%">
+
+            <div id="A_mans_true_wealth___hereafter">
+                <span>“A man’s true wealth <br/> hereafter is the </span><br/><span style="color:rgba(0,0,0,1);"> good he has done</span><span> <br/> to his fellowmen”<br/>               - Mahatma Gandhi</span>
+            </div>
+            <svg class="Rectangle_45_t">
+                <linearGradient id="Rectangle_45_t" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+                    <stop offset="0" stop-color="#88bbd6" stop-opacity="1"></stop>
+                    <stop offset="1" stop-color="#99d3df" stop-opacity="1"></stop>
+                </linearGradient>
+                <rect id="Rectangle_45_t" rx="15" ry="15" x="0" y="0" width="304" height="183">
+                </rect>
+            </svg>
+            <div id="As_India_is_hit_by_the_second_">
+                <span>As India is hit by the second wave <br/>of </span><span style="color:rgba(229,26,26,1);">Covid 19</span><span>,<br/>they are in desperate need of </span><br/><span style="color:rgba(229,26,26,1);">your help</span><span>.</span>
+            </div>
+
+            <svg class="Rectangle_46">
+                <rect id="Rectangle_46" rx="15" ry="15" x="0" y="0" width="244" height="61">
+                </rect>
+            </svg>
+            <div id="Lets_donate_to_India">
+                <!-- <button type="button" class="btn btn btn-primary" >Open</button> -->
+                <span>Let’s donate to India</span>
+            </div>
+            <svg class="Icon_awesome-arrow-alt-circle-" viewBox="0.563 0.563 44.875 44.875">
+                <path id="Icon_awesome-arrow-alt-circle-" d="M 45.43750381469727 23 C 45.43750381469727 35.39491271972656 35.39491271972656 45.43750381469727 23 45.43750381469727 C 10.6050910949707 45.43750381469727 0.5625 35.39491271972656 0.5625 23 C 0.5625 10.6050910949707 10.6050910949707 0.5625 23 0.5625 C 35.39491271972656 0.5625 45.43750381469727 10.6050910949707 45.43750381469727 23 Z M 19.0191535949707 12.50504112243652 L 19.0191535949707 23 L 12.60456275939941 23 C 11.6364917755127 23 11.14793395996094 24.1761589050293 11.83553504943848 24.85471343994141 L 22.23097229003906 35.19586944580078 C 22.65620040893555 35.62109756469727 23.33475303649902 35.62109756469727 23.75998115539551 35.19586944580078 L 34.15542221069336 24.85471343994141 C 34.84302139282227 24.16711235046387 34.35446548461914 23 33.38639450073242 23 L 26.9808464050293 23 L 26.9808464050293 12.50504112243652 C 26.9808464050293 11.90791320800781 26.49228668212891 11.41935539245605 25.89516067504883 11.41935539245605 L 20.10483932495117 11.41935539245605 C 19.50771141052246 11.41935539245605 19.0191535949707 11.90791320800781 19.0191535949707 12.50504112243652 Z">
+                </path>
+            </svg>
+        <!-- </section> --></div>
+    </section>
+    <section>
+        <div id="page2" class="page2">
+            <svg class="Rectangle_61">
+                <rect id="Rectangle_61" rx="0" ry="0" x="0" y="0" width="375" height="812">
+                </rect>
+            </svg>
+    <div id="Choose_your_cause_and_area">
+        <span>Choose your cause and area</span>
+    </div>
+    <button  class="btn btn-outline-dark Rectangle_51" onclick="getCharities(0,0)"> other -URBAN</button>
+    <button class="btn btn-outline-dark Rectangle_52" onclick="getCharities(0,1)"> other RURAL  </button>
+    <button class="btn btn btn-outline-dark Rectangle_49" onclick="getCharities(1,0)"> Medical_Supply - URBAN </button>
+    <button class="btn btn btn-outline-dark Rectangle_50" onclick="getCharities(1,1)"> Medical_Supply - RURUAL</button>
+    <div id="Urban_Food">
+
+            <BUTTON class="btn btn-outline-dark Rectangle_47" onclick="getCharities(2,0)">FOOD - URBAN
+            </button>
+
+    </div>
+    <div id="Rural_Food">
+        <BUTTON class="btn btn-outline-dark Rectangle_48" onclick="getCharities(2,1)">FOOD - RURAL
+
+        </button>
+
+
+    </div>
+
+    <div id="Urban">
+        <span>Urban</span>
+    </div>
+    <div id="Rural">
+        <span>Rural</span>
+    </div>
+    <div id="Food_Relief">
+        <span>Food<br/>Relief</span>
+    </div>
+    <div id="Medical_Supply">
+        <span>Medical<br/>Supply</span>
+    </div>
+    <div id="Other">
+        <span>Other</span>
+    </div>
+    <svg class="Line_1" viewBox="0 0 327 1">
+        <path id="Line_1" d="M 0 0 L 327 0">
+        </path>
+    </svg>
+
+
+
+
+
+    <img id="boys" src="page1_boys.png" srcset="page1_boys.png 1x, page1_boys@2x.png 2x">
+</div>
+    </section>
+<section>
+    <div class="page3"
+        <div id="UrbanFoodInteractiveGrid" class="UrbanFoodInteractiveGrid">
+
+            <button id="Charity1" class="Rectangle_53 charitybox" value="-1" onclick="display(value)">
+                <input type="checkbox" class="ccbx" name="Charity1" value="-1">
+                <img class="charityimg" src="" alt="" style="width:100%">
+                    <!-- <label for="vehicle1"></label> -->
+            </button>
+            <button id="Charity3" class="Rectangle_54 charitybox" value="-1" onclick="display(value)">
+                <input type="checkbox"  class="ccbx" name="Charity3" value="-1">
+                <img class="charityimg" src="" alt="" style="width:100%">
+
+            </button>
+            <button id="Charity4" class="Rectangle_55 charitybox" value="-1" onclick="display(value)">
+                <input type="checkbox"  class="ccbx" name="Charity4" value="-1">
+                <img  class="charityimg"src="" alt="" style="width:100%">
+
+            </button>
+            <button id="Charity5" class="Rectangle_56 charitybox" value="-1" onclick="display(value)">
+                <input type="checkbox"  class="ccbx" name="Charity5" value="-1">
+                <img  class="charityimg" src="" alt="" style="width:100%">
+
+            </button>
+            <button id="Charity6" class="Rectangle_57 charitybox" value="-1" onclick="display(value)">
+                <input type="checkbox"  class="ccbx" name="Charity6" value="-1">
+                <img class="charityimg" src="" alt="" style="width:100%">
+
+            </button>
+            <button id="Charity2" class="Path_13 charitybox" value="-1" onclick="display(value)">
+                <input type="checkbox"  class="ccbx" name="Charity2" value="-1">
+                <img class="charityimg" src="" alt="" style="width:100%">
+
+            </button>
+
+            <div  class="Path_9" viewBox="0 0 375 232">
+                <p id="descriptiontext">Description of Charity</p>
+
+            </div>
+            <!-- <svg class="Line_1" viewBox="0 0 327 1">
+                <path id="Line_1" d="M 0 0 L 327 0">
+                </path>
+            </svg> -->
+            <div class="page4 ">
+                <div class="money_info">
+                    <label>Enter Donation Amount</label>
+                    <br>
+                    <input type="text" id="money_text" name="name" required
+             minlength="0" maxlength="6" size="19" style="background-color:#80808042;">
+             <button class="money_button" onclick="show()">Show Equal Split</button>
+
+                </div>
+
+
+                <table border="1"
+           cellspacing="15"
+                     cell>
+                    <tr>
+                    <th>Charity</th>
+                    <th></th><th>Amount</th>
+                    </tr>
+                    <tr>
+                    <td>
+                        <div class="cmoney1 charitybox">
+                            <img class="charityimg" src="" alt="" style="width:100%">
+                        </div>
+                        <td></td>
+                    </td>
+                    <td><div class="cmoney2 charitybox" contenteditable="true"></div></td>
+                    <td>
+                        <form>
+                            <div id="number" class="number">                        
+                            <input type="button" onclick="incrementValue(value)" value="  ▲  " />
+                            <input type="button" onclick="decrementValue(value)" value="  ▼  " />
+                            <input type="text" id="incrementdisplay" value=" Change by 5%">
+                         </form>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><div class="cmoney1 charitybox"><img class="charityimg" src="" alt="" style="width:100%"></div></td>
+                    <td></td>
+                    <td><div class="cmoney2 charitybox" contenteditable="true"></div></td>
+                    <td><form>
+                        <div id="number1" class="number1">                      
+                        <input type="button" onclick="incrementValue1(value)" value="  ▲  " />
+                        <input type="button" onclick="decrementValue1(value)" value="  ▼  " />  </div>               </form></td>
+                    </tr>
+                    <tr>
+                    <td><div class="cmoney1 charitybox"><img class="charityimg" src="" alt="" style="width:100%"></div></td>
+                    <td></td>
+                    <td><div class="cmoney2 charitybox" contenteditable="true"></div></td>
+                    <td><form>
+                        <div id="number2" class="number2">
+                        <input type="button" onclick="incrementValue2(value)"  value="  ▲  " />
+                        <input type="button" onclick="decrementValue2(value)"  value="  ▼  " /> </div>               </form></td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</section>
+
+<!-- </div> -->
+</body>
+
+</html>

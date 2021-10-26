@@ -1,0 +1,1220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  /* background-color: rgba(233,233,233,1); */
+}
+body{
+  position: absolute;
+    width: 100vw;
+    height: 400vh;
+    background-color: rgba(233,233,233,1);
+    /* overflow: hidden; */
+
+
+}
+#iPhone_X_XS_11_Pro__1 {
+  /* position: absolute; */
+  width: 100vw;
+  /* height: 300vh; */
+  background-color: rgba(233,233,233,1);
+  overflow: hidden;
+  --web-view-name: iPhone X, XS, 11 Pro – 1;
+  --web-view-id: iPhone_X_XS_11_Pro__1;
+  --web-scale-on-resize: true;
+  --web-enable-deep-linking: true;
+}
+/* .page1{
+  position: absolute;
+  height: 100vh;
+  background-color: yellow;
+/* } */
+.page2{
+  position: absolute;
+  /*height: 80vh; */
+  background-color: green;
+}
+
+.page4{
+  position: absolute;
+  /* height: 100vh;
+  bo
+
+  /* background-color: red; */
+  top: 650px;
+  left: 50px
+ }
+
+#Rectangle_60 {
+  fill: transparent;
+}
+.Rectangle_60 {
+  position: absolute;
+  overflow: visible;
+  width: 375px;
+  height: 812px;
+  left: 0px;
+  top: 0px;
+}
+#Rectangle_61 {
+  fill: transparent;
+}
+.Rectangle_61 {
+  position: absolute;
+  overflow: visible;
+  width: 375px;
+  height: 812px;
+  left: -11px;
+  top: 812px;
+}
+#Rectangle_1 {
+  opacity: 0.713;
+  fill: rgba(135,187,214,1);
+}
+.Rectangle_1 {
+  position: absolute;
+  overflow: visible;
+  width: 375px;
+  height: 213px;
+  left: 0px;
+  top: 104px;
+}
+#girl_gray {
+  opacity: 0.713;
+  position: absolute;
+  width: 398px;
+  height: 285px;
+  left: 97px;
+  top: 49px;
+  overflow: visible;
+}
+#A_mans_true_wealth___hereafter {
+  left: 14px;
+  top: 118px;
+  position: absolute;
+  overflow: visible;
+  width: 311px;
+  white-space: nowrap;
+  line-height: 37px;
+  margin-top: -6px;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: rgba(111,112,112,1);
+}
+#Rectangle_45_t {
+  fill: url(#Rectangle_45_t);
+}
+.Rectangle_45_t {
+  filter: drop-shadow(0px 13px 16px rgba(0, 0, 0, 0.161));
+  position: absolute;
+  overflow: visible;
+  width: 352px;
+  height: 231px;
+  left: 0px;
+  top: 378px;
+}
+#As_India_is_hit_by_the_second_ {
+  left: 7px;
+  top: 416px;
+  position: absolute;
+  overflow: visible;
+  width: 243px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -4px;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(0,0,0,1);
+}
+#Rectangle_46 {
+  opacity: 0.9;
+  fill: rgba(255,255,255,1);
+  stroke: rgba(255,255,255,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.cmoney1{
+  height: 102px;
+  width:102px;
+}
+.money_button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* font-size: 16px; */
+}
+th, td {
+  padding: 15px;
+}
+.money_info{
+  width: 60vw;
+  padding: 10px;
+}
+.cmoney2{
+  height: 102px;
+  width:102px;
+  text-align: center;
+
+}
+.Rectangle_46 {
+  filter: drop-shadow(0px 13px 16px rgba(0, 0, 0, 0.161));
+  position: absolute;
+  overflow: visible;
+  width: 292px;
+  height: 109px;
+  left: 113px;
+  top: 612px;
+}
+#Lets_donate_to_India {
+  left: 130px;
+  top: 624px;
+  position: absolute;
+  overflow: visible;
+  width: 217px;
+  white-space: nowrap;
+  line-height: 32px;
+  margin-top: -4px;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: rgba(0,0,0,1);
+}
+#Icon_awesome-arrow-alt-circle- {
+  fill: rgba(135,187,214,1);
+}
+.Icon_awesome-arrow-alt-circle- {
+  overflow: visible;
+  position: absolute;
+  width: 44.875px;
+  height: 44.875px;
+  left: 296px;
+  top: 730.125px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Choose_your_cause_and_area {
+  left: 42px;
+  top: 886px;
+  position: absolute;
+  overflow: visible;
+  width: 299px;
+  white-space: nowrap;
+  line-height: 32px;
+  margin-top: -4px;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: rgba(0,0,0,1);
+}
+#Rectangle_49 {
+  fill: rgba(255,255,255,1);
+}
+.Rectangle_49 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 136px;
+  top: 1224px;
+}
+#Rectangle_50 {
+  fill: rgba(255,255,255,1);
+}
+.Rectangle_50 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 243px;
+  top: 1224px;
+}
+#Rectangle_51 {
+  fill: rgba(255,255,255,1);
+}
+.Rectangle_51 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 136px;
+  top: 1377px;
+}
+#Rectangle_52 {
+  fill: rgba(255,255,255,1);
+}
+.Rectangle_52 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 243px;
+  top: 1377px;
+}
+#Urban {
+  left: 136px;
+  top: 980px;
+  position: absolute;
+  overflow: visible;
+  width: 82px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: rgba(111,112,112,1);
+}
+#Rural {
+  left: 255px;
+  top: 980px;
+  position: absolute;
+  overflow: visible;
+  width: 69px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: rgba(111,112,112,1);
+}
+#Food_Relief {
+  left: 30px;
+  top: 1067px;
+  position: absolute;
+  overflow: visible;
+  width: 74px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: rgba(111,112,112,1);
+}
+#Medical_Supply {
+  left: 30px;
+  top: 1226px;
+  position: absolute;
+  overflow: visible;
+  width: 105px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: rgba(111,112,112,1);
+}
+#Other {
+  left: 30px;
+  top: 1396px;
+  position: absolute;
+  overflow: visible;
+  width: 77px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: rgba(111,112,112,1);
+}
+#Icon_awesome-arrow-alt-circle-_ {
+  fill: rgba(135,187,214,1);
+}
+.Icon_awesome-arrow-alt-circle-_ {
+  overflow: visible;
+  position: absolute;
+  width: 44.875px;
+  height: 44.875px;
+  left: 289px;
+  top: 1553.125px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Line_1 {
+  fill: transparent;
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Line_1 {
+  overflow: visible;
+  position: absolute;
+  width: 327px;
+  height: 1px;
+  left: 30px;
+  top: 1616px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Urban_Food {
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 125px;
+  top: 1071px;
+  overflow: visible;
+}
+#Group_3 {
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#Rectangle_47 {
+  fill: rgba(255,255,255,1);
+}
+.Rectangle_47 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 0px;
+  top: 0px;
+}
+#Icon_map-food {
+  fill: rgba(153,211,223,1);
+}
+.Icon_map-food {
+  overflow: visible;
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  left: 11px;
+  top: 15px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Rural_Food {
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 243px;
+  top: 1071px;
+  overflow: visible;
+}
+#Rectangle_48 {
+  fill: rgba(255,255,255,1);
+}
+.Rectangle_48 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 0px;
+  top: 0px;
+}
+#Icon_map-food_bh {
+  fill: rgba(153,211,223,1);
+}
+
+.Icon_map-food_bh {
+  overflow: visible;
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  left: 12px;
+  top: 15px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Icon_map-food_bh {
+  fill: rgba(153,211,223,1);
+}
+.Icon_map-food_bh {
+  overflow: visible;
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  left: 12px;
+  top: 15px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Icon_awesome-briefcase-medical {
+  fill: rgba(153,211,223,1);
+}
+.Icon_awesome-briefcase-medical {
+  overflow: visible;
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  left: 259px;
+  top: 1243px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Icon_awesome-briefcase-medical_bj {
+  fill: rgba(153,211,223,1);
+}
+.Icon_awesome-briefcase-medical_bj {
+  overflow: visible;
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  left: 153px;
+  top: 1245px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Icon_material-attach-money {
+  fill: rgba(153,211,223,1);
+}
+.Icon_material-attach-money {
+  overflow: visible;
+  position: absolute;
+  width: 42.806px;
+  height: 51px;
+  left: 273.597px;
+  top: 1400px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Icon_material-attach-money_bl {
+  fill: rgba(153,211,223,1);
+}
+.Icon_material-attach-money_bl {
+  overflow: visible;
+  position: absolute;
+  width: 42.806px;
+  height: 51px;
+  left: 166.097px;
+  top: 1400px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#boys {
+  position: absolute;
+  width: 456px;
+  height: 458px;
+  left: -444px;
+  top: 266px;
+  overflow: visible;
+}
+.charitybox {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 2px
+}
+.ccbx{
+  position: absolute;
+  right: 110px;
+  bottom: 45px;
+}
+.charityimg{
+  /* border-radius: 20px */
+}
+#UrbanFoodInteractiveGrid {
+  position: absolute;
+  width: 375px;
+  height: 691px;
+  left: 0px;
+  top: 1745px;
+  overflow: visible;
+}
+#UrbanFoodInteractiveGrid1 {
+  position: absolute;
+  width: 375px;
+  height: 691px;
+  left: 0px;
+  top: 1745px;
+  overflow: visible;
+}
+#Rectangle_53 {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_53 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 0px;
+}
+#Rectangle_54 {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_54 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 0px;
+}
+#Rectangle_55 {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_55 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 153px;
+}
+#Rectangle_56 {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_56 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 153px;
+}
+#Rectangle_57 {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_57 {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 306px;
+}
+#Path_13 {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_13 {
+  overflow: visible;
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 306px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Path_9 {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_9 {
+  overflow: visible;
+  position: absolute;
+  width: 375px;
+  height: 232px;
+  left: 0px;
+  top: 459px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#RuralFoodInteractiveGrid {
+  position: absolute;
+  width: 375px;
+  height: 691px;
+  left: 0px;
+  top: 2557px;
+  overflow: visible;
+}
+#Rectangle_53_bw {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_53_bw {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 0px;
+}
+#Rectangle_54_bx {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_54_bx {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 0px;
+}
+#Rectangle_55_by {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_55_by {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 153px;
+}
+#Rectangle_56_bz {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_56_bz {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 153px;
+}
+#Rectangle_57_b {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_57_b {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 306px;
+}
+#Path_13_b {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_13_b {
+  overflow: visible;
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 306px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Path_9_b {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_9_b {
+  overflow: visible;
+  position: absolute;
+  width: 375px;
+  height: 232px;
+  left: 0px;
+  top: 459px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#UrbnMedInteractiveGrid {
+  position: absolute;
+  width: 375px;
+  height: 691px;
+  left: 0px;
+  top: 3369px;
+  overflow: visible;
+}
+#Rectangle_53_b {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_53_b {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 0px;
+}
+#Rectangle_54_b {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_54_b {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 0px;
+}
+#Rectangle_55_b {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_55_b {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 153px;
+}
+#Rectangle_56_b {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_56_b {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 153px;
+}
+#Rectangle_57_ca {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_57_ca {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 306px;
+}
+#Path_13_ca {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_13_ca {
+  overflow: visible;
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 306px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Path_9_ca {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_9_ca {
+  overflow: visible;
+  position: absolute;
+  width: 375px;
+  height: 232px;
+  left: 0px;
+  top: 459px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#RuralMedInteractiveGrid {
+  position: absolute;
+  width: 375px;
+  height: 691px;
+  left: 0px;
+  top: 4181px;
+  overflow: visible;
+}
+#Rectangle_53_cc {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_53_cc {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 0px;
+}
+#Rectangle_54_cd {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_54_cd {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 0px;
+}
+#Rectangle_55_ce {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_55_ce {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 153px;
+}
+#Rectangle_56_cf {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_56_cf {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 153px;
+}
+#Rectangle_57_cg {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_57_cg {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 306px;
+}
+#Path_13_ch {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_13_ch {
+  overflow: visible;
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 306px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Path_9_ci {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_9_ci {
+  overflow: visible;
+  position: absolute;
+  width: 375px;
+  height: 232px;
+  left: 0px;
+  top: 459px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#UrbnOtherInteractiveGrid {
+  position: absolute;
+  width: 375px;
+  height: 691px;
+  left: 0px;
+  top: 4993px;
+  overflow: visible;
+}
+#Rectangle_53_ck {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_53_ck {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 0px;
+}
+#Rectangle_54_cl {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_54_cl {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 0px;
+}
+#Rectangle_55_cm {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_55_cm {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 153px;
+}
+#Rectangle_56_cn {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_56_cn {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 153px;
+}
+#Rectangle_57_co {
+  fill: rgba(255,255,255,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_57_co {
+  position: absolute;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  left: 51px;
+  top: 306px;
+}
+#Path_13_cp {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_13_cp {
+  overflow: visible;
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 204px;
+  top: 306px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#Path_9_cq {
+  fill: rgba(133,185,183,1);
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_9_cq {
+  overflow: visible;
+  position: absolute;
+  width: 375px;
+  height: 232px;
+  left: 0px;
+  top: 459px;
+  transform: matrix(1,0,0,1,0,0);
+}
+#header {
+  position: absolute;
+  width: 375px;
+  height: 86px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#Rectangle_2 {
+  fill: rgba(233,233,233,1);
+}
+.Rectangle_2 {
+  position: absolute;
+  overflow: visible;
+  width: 375px;
+  height: 86px;
+  left: 0px;
+  top: 0px;
+}
+#decidetodonatetoday {
+  left: 104px;
+  top: 28px;
+  position: absolute;
+  overflow: visible;
+  width: 195px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Optima;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(136,187,214,1);
+}
+#Icon_metro-lines {
+  fill: rgba(151,194,216,1);
+}
+.Icon_metro-lines {
+  overflow: visible;
+  position: absolute;
+  width: 37.327px;
+  height: 36.248px;
+  left: 12.567px;
+  top: 22.521px;
+  transform: matrix(1,0,0,1,0,0);
+}
