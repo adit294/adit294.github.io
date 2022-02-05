@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .container {
@@ -197,7 +198,7 @@ input[type="range"]::-ms-fill-upper {
 </div>
 </div>
 <script>
-//Code is repeating ; use function
+
 let slider = document.getElementById("myRange");
 let output = document.getElementById("demo");
 output.innerHTML = slider.value;
@@ -223,7 +224,31 @@ document.getElementById("myRange2").oninput = function() {
   this.style.background = 'linear-gradient(to right, transparent 0%, transparent ' + value + '%, turquoise ' + value + '%, blue 100%)'
   output2.innerHTML = this.value;
 };
+  // change slider2,3 when 1 is adjusted
+  document.getElementById('myRange').addEventListener('change', function (e) {
+    document.getElementById('myRange1').value = (100 - e.target.value)/2
+    document.getElementById('myRange2').value = (100 - e.target.value)/2
+    second_val=(100 - e.target.value)/2
+    output1.innerHTML = second_val;
+    output2.innerHTML = second_val;
+  })
 
+  // when 2nd slider is adjusted
+  document.getElementById('myRange1').addEventListener('change', function (e) {
+    document.getElementById('myRange').value = (100 - e.target.value)/2
+    document.getElementById('myRange2').value = (100 - e.target.value)/2
+    second_val=(100 - e.target.value)/2
+    output.innerHTML = second_val;
+    output2.innerHTML = second_val;
+  })
+  // when 3rd slider is adjusted
+  document.getElementById('myRange2').addEventListener('change', function (e) {
+    document.getElementById('myRange').value = (100 - e.target.value)/2
+    document.getElementById('myRange1').value = (100 - e.target.value)/2
+    second_val=(100 - e.target.value)/2
+    output.innerHTML = second_val;
+    output1.innerHTML = second_val;
+  })
 </script>
 </body>
 </html>

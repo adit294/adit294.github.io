@@ -1,0 +1,93 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<input id='myRange' type='range' min="0" max="100"  value='33' oninput="this.nextElementSibling.value = this.value"/>
+<p>Donation%: <span id="demo"></span>%</p>
+<input id='myRange1' type='range' min="0" max="100"  value='33' oninput="this.nextElementSibling.value = this.value"/>
+<p>Donation%: <span id="demo1"></span>%</p>
+<input id='myRange2' type='range' min="0" max="100"  value='33' oninput="this.nextElementSibling.value = this.value"/>
+<p>Donation%: <span id="demo2"></span>%</p>
+<script>
+let slider = document.getElementById("myRange");
+let output = document.getElementById("demo");
+output.innerHTML = slider.value;
+document.getElementById("myRange").oninput = function() {
+  let value = (this.value-this.min)/(this.max-this.min)*100
+  this.style.background = 'linear-gradient(to right, transparent 0%, transparent ' + value + '%, turquoise ' + value + '%, blue 100%)'
+  output.innerHTML = this.value;
+};
+
+let slider1 = document.getElementById("myRange1");
+let output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
+document.getElementById("myRange1").oninput = function() {
+  var value = (this.value-this.min)/(this.max-this.min)*100
+  this.style.background = 'linear-gradient(to right, transparent 0%, transparent ' + value + '%, turquoise ' + value + '%, blue 100%)'
+  output1.innerHTML = this.value;
+};
+let slider2 = document.getElementById("myRange2");
+let output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+document.getElementById("myRange2").oninput = function() {
+  let value = (this.value-this.min)/(this.max-this.min)*100
+  this.style.background = 'linear-gradient(to right, transparent 0%, transparent ' + value + '%, turquoise ' + value + '%, blue 100%)'
+  output2.innerHTML = this.value;
+};
+
+  // change slider2,3 when 1 is adjusted
+  document.getElementById('myRange').addEventListener('change', function (e) {
+    document.getElementById('myRange1').value = (100 - e.target.value)/2
+    document.getElementById('myRange2').value = (100 - e.target.value)/2
+    second_val=(100 - e.target.value)/2
+    output1.innerHTML = second_val;
+    output2.innerHTML = second_val;
+  })
+
+  // when 2nd slider is adjusted
+  document.getElementById('myRange1').addEventListener('change', function (e) {
+    document.getElementById('myRange').value = (100 - e.target.value)/2
+    document.getElementById('myRange2').value = (100 - e.target.value)/2
+    second_val=(100 - e.target.value)/2
+    output.innerHTML = second_val;
+    output2.innerHTML = second_val;
+  })
+  // when 3rd slider is adjusted
+  document.getElementById('myRange2').addEventListener('change', function (e) {
+    document.getElementById('myRange').value = (100 - e.target.value)/2
+    document.getElementById('myRange1').value = (100 - e.target.value)/2
+    second_val=(100 - e.target.value)/2
+    output.innerHTML = second_val;
+    output1.innerHTML = second_val;
+  })
+/* $(document).ready(function() {
+    var max_total =  100;
+    $("#myRange2").on("change", function(){
+        var slider1 = this.value;
+        var second_val= (max_total - slider1)/2;
+        $("#myRange").prop("value", second_val);
+        $("#myRange").change();
+        $("#myRange1").prop("value", second_val);
+        $("#myRange1").change();
+        output1.innerHTML = second_val;
+        output.innerHTML = second_val;
+    });
+});
+$(document).ready(function() {
+    var max_total =  100;
+    $("#myRange2").on("change", function(){
+        var slider1 = this.value;
+        var second_val= (max_total - slider1)/2;
+        $("#myRange").prop("value", second_val);
+        $("#myRange").change();
+        $("#myRange1").prop("value", second_val);
+        $("#myRange1").change();
+        output1.innerHTML = second_val;
+        output.innerHTML = second_val;
+    });
+}); */
+
+</script>
+</body>
