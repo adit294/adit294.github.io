@@ -1,99 +1,819 @@
-<html>
-	<head>
-        <title>Home</title>
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale = 0.7">
-        <meta name="description" content="Hey There, I am Adit Agarwal! Checkout some book reviews and articles written by me :) Linkedin :- https://linkedin.com/in/adit29">
-        <meta name="google-site-verification" content="XqRbP9jqCBfca5TfxlVyclDjQ0oZW61cgAYthkArvBE" />
-        <meta name="google-site-verification" content="5w8zKhacvsiN3xhzAJnx5GMYHb3EgAwJlNQtu3SvA-s" />
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
-        <link rel="preload" href="Flowers.png" as="image">
-        <link rel="preload" href="Desert.png" as="image">
-        <link rel="preload" href="sunset.png" as="image">
-        <link rel="preload" href="coding2.jpeg" as="image">
-	</head>
-	<body>
-     
-		<div class="container">
-            <div class="nav-wrapper">
-                <div class="left-side">
-                    <div class="nav-link-wrapper">
-                        <div class="uppertextunderline">
-                       <a href="index">Home</a>
-                    </div>
-               </div>
-                   <div class="nav-link-wrapper">
-                       <div class="nav-link-underline">
-                       <a href="about">About</a>
-                    </div>
-                   </div>
-                   <div class="nav-link-wrapper">
-                    <div class="nav-link-underline">
-                         <a href="articles">Articles</a>
-                    </div>
-                    </div>  
-                    <div class="nav-link-wrapper">
-                        <div class="nav-link-underline">
-                             <a href="projects">Projects</a>
-                             </div>
-                        </div>
-                    <div class="nav-link-wrapper">
-                        <div class="nav-link-underline">
-                        <a href="contactus">Contact</a>
-                    </div>
-                   </div>   
- 
-                   
-           </div>
-           <div class="right-side">
-            <div class="brand">
-                <a href="index">
-                    <img src="brandlogo.png" alt="">
-                 </a>
-               </div>
-            </div>
-    
-       </div> 
-       <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-        <ul id="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contactus.html">Contact</a></li>
-        </ul>
-       </div>
-      </nav>
-       <div class="images-wrapper">
-			<div class="outer">
-				
-				<div class="details">
-					<h1>Hey, This is Adit Agarwal</h1>
-					<h2>
-						<span>Thank You, for visiting my site<br> <br></span> 
-						<div class="thankee">
-                        <h3><a href="about">Click here to read about me </a> 
-                        </h3>
-                    </div>
-					</h2>
-                </div>
-                <div class="mydetailsphone">
-                    <h1>Hey, This is Adit Agarwal</h1>
-                    <h2>Thankyou for visiting my site</h2>
-                    <div class="thankee">
-                        <h3><a href="about.html">Click here to read about me </a> 
-                        </h3>
-                </div>
-			</div>
-			</div>
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.52" />
+    <meta name="author" content="Adit Agarwal">
+    <meta name="description" content="Bachelor's Student in Computer Science & Advertising">
+
+    <link rel="alternate" hreflang="en-us" href="http://aditagarwal.com/">
+    <meta name="theme-color" content="#0095eb">
+
+    <!-- Bootstrap CSS (Consider upgrading to Bootstrap 4 or 5 for better responsiveness and features) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+    <!-- Google Fonts: Poppins and Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Roboto:400,400italic,700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+    <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+    <link rel="canonical" href="http://aditagarwal.com/">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@aditagarwal">
+    <meta property="twitter:creator" content="@aditagarwal">
+    <meta property="og:site_name" content="Adit Agarwal">
+    <meta property="og:url" content="http://aditagarwal.com/">
+    <meta property="og:title" content="Adit Agarwal">
+    <meta property="og:description" content="Bachelor's Student in Computer Science & Advertising">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:updated_time" content="2024-04-27T00:00:00+00:00">
+
+    <title>Adit Agarwal</title>
+
+    <!-- Custom Styles -->
+    <style>
+        /* Base Font Settings */
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px; /* Increased base font size */
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #ffffff;
+            color: #333333;
+            padding-top: 50px; /* Reverted for slimmer navbar */
+        }
+
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        body.dark-mode .navbar {
+            background-color: #1f1f1f;
+            border-color: #333333;
+        }
+        body.dark-mode .navbar-brand, 
+        body.dark-mode .navbar-nav > li > a {
+            color: #ffffff;
+        }
+        body.dark-mode .section-heading h1 {
+            color: #ffffff;
+        }
+        body.dark-mode .card {
+            background-color: #1f1f1f;
+            border: 1px solid #333333;
+        }
+        body.dark-mode .card-body h4 a,
+        body.dark-mode .card-body a.read-more,
+        body.dark-mode .card-body a.learn-more {
+            color: #1e90ff;
+        }
+        body.dark-mode .site-footer {
+            background-color: #1f1f1f;
+            color: #ffffff;
+        }
+        body.dark-mode .contact-section,
+        body.dark-mode .research-section,
+        body.dark-mode .internships-section,
+        body.dark-mode .articles-section,
+        body.dark-mode .projects-section,
+        body.dark-mode .white-section { /* Added white-section for dark mode */
+            background-color: #1f1f1f;
+            color: #ffffff;
+        }
+
+        /* Hover Effects */
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn-outline {
+            border: 2px solid #333333;
+            color: #333333;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .btn-outline:hover {
+            background-color: #333333;
+            color: #ffffff;
+        }
+        .btn-primary {
+            background-color: #333333;
+            border-color: #333333;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, border-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: #555555;
+            border-color: #555555;
+            color: #ffffff;
+        }
+
+        /* Adjust Image Sizes */
+        .project-item img, .article-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .project-item img:hover, .article-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dark-mode-toggle:hover {
+            background-color: #555555;
+            transform: rotate(20deg);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 90px; /* Positioned above the dark mode toggle */
+            right: 20px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: opacity 0.3s, transform 0.3s;
+            display: none; /* Hidden by default */
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .scroll-to-top:hover {
+            background-color: #555555;
+            transform: translateY(-5px);
+        }
+        body.dark-mode .scroll-to-top {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        /* Smooth Transitions for Dark Mode */
+        .card, .navbar, .section-heading h1, .btn-outline, .btn-primary, .site-footer, .network-icon i, .contact-section, .research-section, .internships-section, .articles-section, .projects-section, .white-section {
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        /* Remove Footer */
+        .site-footer {
+            display: none;
+        }
+
+        /* Left Align Header Info */
+        #profile {
+            text-align: left;
+        }
+
+        /* Modernize Layout */
+        .home-section {
+            padding: 60px 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        /* Alternating Section Backgrounds */
+        .home-section:nth-of-type(odd) {
+            background-color: #ffffff; /* White background */
+        }
+        .home-section:nth-of-type(even) {
+            background-color: #f9f9f9; /* Grey background */
+        }
+
+        .section-heading h1 {
+            font-size: 42px; /* Increased font size */
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-heading h1::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: #333333;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: width 0.3s;
+        }
+        .section-heading h1:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 767px) {
+            .project-item img, .article-item img {
+                height: 150px;
+            }
+            .section-heading h1 {
+                text-align: center;
+                font-size: 32px; /* Adjusted for smaller screens */
+            }
+            #profile {
+                text-align: center;
+            }
+            .home-section {
+                padding: 40px 10px;
+            }
+            .navbar {
+                padding: 10px 15px; /* Reverted padding for slimmer navbar */
+            }
+            body {
+                padding-top: 50px; /* Reverted for slimmer navbar */
+            }
+            body.dark-mode .card {
+                box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+            }
+        }
+
+        /* Enhanced Navbar Styles */
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            /* Removed height and min-height for slimmer navbar */
+        }
+        .navbar-default .navbar-nav > li > a {
+            padding-top: 15px; /* Reverted padding */
+            padding-bottom: 15px;
+            transition: color 0.3s;
+            font-size: 16px; /* Increased font size for navbar links */
+        }
+        .navbar-default .navbar-nav > li > a:hover {
+            color: #555555;
+        }
+
+        /* Enhanced Card Styles */
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 15px; /* Added padding */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        body.dark-mode .card {
+            background-color: #1f1f1f;
+            box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+        }
+
+        /* Enhanced Hover Effects */
+        .network-icon a:hover {
+            color: #1e90ff;
+            transition: color 0.3s;
+        }
+
+        /* Contact and Research Sections Styling */
+        .contact-section, .research-section, .internships-section, .articles-section, .projects-section, .white-section {
+            padding: 60px 20px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        /* Read More and Learn More Button Styling */
+        .read-more, .learn-more {
+            background: none;
+            border: none;
+            color: #333333;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.3s, opacity 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        .read-more:hover, .learn-more:hover {
+            color: #555555;
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+        .read-more i, .learn-more i {
+            margin-left: 5px;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .read-more:hover i, .learn-more:hover i {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+        /* View All Articles Link Styling */
+        .view-all-articles {
+            color: #333333;
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s;
+            font-size: 18px; /* Increased font size */
+        }
+        .view-all-articles:hover {
+            color: #555555;
+        }
+        .view-all-articles i {
+            margin-left: 5px;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .view-all-articles:hover i {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="50">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Hamburger Menu for Mobile -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target=".navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#top">Adit Agarwal</a>
         </div>
-    </div>
-	</body>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a href="#about">
+                <span>About</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects">
+                <span>Projects</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#internships">
+                <span>Internships</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#articles">
+                <span>Articles</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#research">
+                <span>Research</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact">
+                <span>Contact</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://aditagarwal.com/resume.pdf" target="_blank">
+                <span>Resume</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="home-section white-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <div id="profile">
+              <img src="my_photo_22.png" alt="Adit Agarwal" class="img-circle img-responsive" style="width: 200px; height: 200px; object-fit: cover; margin: 0 auto 20px;">
+              <div class="portrait-title text-center">
+                <h2 itemprop="name">Adit Agarwal</h2>
+                <h3 itemprop="jobTitle">Computer Science</h3>
+                <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+                  <span itemprop="name">University of Illinois Urbana Champaign</span>
+                </h3>
+              </div>
+              <link itemprop="url" href="http://aditagarwal.com/">
+              <ul class="network-icon list-inline text-center">
+                <li>
+                  <a itemprop="sameAs" href="mailto:adit3@illinois.edu" target="_blank" rel="noopener">
+                    <i class="fa fa-envelope big-icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a itemprop="sameAs" href="https://www.linkedin.com/in/adit29/" target="_blank" rel="noopener">
+                    <i class="fa fa-linkedin big-icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a itemprop="sameAs" href="https://x.com/itsaditagarwal" target="_blank" rel="noopener">
+                    <i class="fa fa-twitter big-icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a itemprop="sameAs" href="https://github.com/adit294" target="_blank" rel="noopener">
+                    <i class="fa fa-github big-icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-8" itemprop="description">
+            <h1 id="biography">About Me</h1>
+            <p>Hello! I'm Adit Agarwal, a passionate Bachelor's student in Computer Science and Advertising at the University of Illinois Urbana Champaign. I enjoy developing innovative solutions in the fields of AI and machine learning, and I'm always eager to learn and take on new challenges.</p>
+            <p>I'm particularly interested in leveraging AI to create impactful projects that bridge technology and real-world applications. Feel free to explore my projects and reach out through the contact page!</p>
+            <div class="row">
+              <div class="col-sm-5">
+                <h3>Interests</h3>
+                <ul class="ul-interests">
+                  <li>Artificial Intelligence</li>
+                  <li>Reinforcement Learning</li>
+                  <li>Neural Networks</li>
+                </ul>
+              </div>
+              <div class="col-sm-7">
+                <h3>Education</h3>
+                <ul class="ul-edu fa-ul">
+                  <li>
+                    <i class="fa-li fa fa-graduation-cap"></i>
+                    <div class="description">
+                      <p class="course">BS in Computer Science & Advertising, 2022 - 2026</p>
+                      <p class="institution">University of Illinois Urbana Champaign</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Resume Button -->
+            <div class="text-left" style="margin-top: 20px;">
+              <a href="https://aditagarwal.com/resume.pdf" target="_blank" class="btn-primary">View Resume</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="home-section projects-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-4 section-heading">
+                <h1>Projects</h1>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <div class="row">
+                  <!-- Project 1: Image Creation Tool -->
+                  <div class="col-xs-12 col-sm-6 col-md-6 project-item">
+                    <div class="card">
+                      <a href="https://github.com/adit294/image-creation-tool" target="_blank">
+                        <img src="https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg" alt="Image Creation Tool" class="img-responsive">
+                      </a>
+                      <div class="card-body">
+                        <h4><a href="https://github.com/adit294/image-creation-tool" target="_blank">Image Creation Tool</a></h4>
+                        <p>Engineered a custom trained text-to-image latent diffusion model using Low-Rank Adaptation (LoRa) to enhance efficiency. Developed a streamlined UX for designers in the alcoholic beverage industry, enabling generation of advertising creatives up to 90% faster.</p>
+                        <a href="https://github.com/adit294/image-creation-tool" target="_blank" class="learn-more">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Project 2: Data Chatbot -->
+                  <div class="col-xs-12 col-sm-6 col-md-6 project-item">
+                    <div class="card">
+                      <a href="https://github.com/adit294/data-chatbot" target="_blank">
+                        <img src="https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg" alt="Data Chatbot" class="img-responsive">
+                      </a>
+                      <div class="card-body">
+                        <h4><a href="https://github.com/adit294/data-chatbot" target="_blank">Data Chatbot</a></h4>
+                        <p>Enabled enhanced data analytics using Image Recognition and sales data. Integrated with YOLOv8 and OpenCV for object detection and image stitching, manifesting critical metrics and data-backed suggestions via a user-friendly Gen AI chatbot to help sales reps meet targets.</p>
+                        <a href="https://github.com/adit294/data-chatbot" target="_blank" class="learn-more">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Project 3: Generative AI Quizzing Platform -->
+                  <div class="col-xs-12 col-sm-6 col-md-6 project-item">
+                    <div class="card">
+                      <a href="https://github.com/adit294/generative-ai-quizzing" target="_blank">
+                        <img src="https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg" alt="Generative AI Quizzing Platform" class="img-responsive">
+                      </a>
+                      <div class="card-body">
+                        <h4><a href="https://github.com/adit294/generative-ai-quizzing" target="_blank">Generative AI Quizzing Platform</a></h4>
+                        <p>Developed a Generative AI-based quizzing system as a study aid for students using Python, React, LangChain, FAISS, and OpenAI. The platform allows users to upload PDFs and generate customized quiz questions based on user queries, enhancing interactive learning.</p>
+                        <a href="https://github.com/adit294/generative-ai-quizzing" target="_blank" class="learn-more">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Project 4: COVID Vaccine Twitter Bots -->
+                  <div class="col-xs-12 col-sm-6 col-md-6 project-item">
+                    <div class="card">
+                      <a href="https://linktr.ee/covidvaxind" target="_blank">
+                        <img src="https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg" alt="COVID Vaccine Twitter Bots (India)" class="img-responsive">
+                      </a>
+                      <div class="card-body">
+                        <h4><a href="https://linktr.ee/covidvaxind" target="_blank">COVID Vaccine Twitter Bots (India)</a></h4>
+                        <p>Programmed Twitter bots using Python, Twitter API, AWS, and APISetu to autonomously tweet about real-time COVID vaccine availability in 6 major Indian cities. Utilized web scraping techniques to update availability every minute, achieving over 2 million impressions and 2000+ followers.</p>
+                        <a href="https://linktr.ee/covidvaxind" target="_blank" class="learn-more">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add more projects as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Internships Section -->
+        <section id="internships" class="home-section internships-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-4 section-heading">
+                <h1>Internships</h1>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <ul class="list-unstyled">
+                  <li>
+                    <h4>AI/ML Engineering Intern – Droisys (droisys.com), Las Vegas, USA</h4>
+                    <p>June 2024 – Aug 2024</p>
+                    <ul>
+                      <li>Engineered a custom trained text-to-image latent diffusion model using Low-Rank Adaptation (LoRa) and developed a streamlined UX for designers in the alcoholic beverage industry, enabling generation of advertising creatives up to 90% faster.</li>
+                      <li>Enabled enhanced data analytics using Image Recognition and sales data, manifesting critical metrics and data-backed suggestions via a user-friendly Gen AI chatbot to help sales reps meet targets.</li>
+                      <li>Implemented image stitching and object detection with OpenCV & YOLOv8 to enhance shelf monitoring.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>Software Engineering Intern – Asymtos Co-Distributed Cloud (asymtos.com)</h4>
+                    <p>June 2023 – Aug 2023</p>
+                    <ul>
+                      <li>Built monitoring tools and interactive dashboards for edge nodes on a distributed cloud system using React, GoLang, and Python. Implemented heartbeat detection, metric collection, plot creation, and more.</li>
+                      <li>Wrote extensive API documentation detailing various public as well as internal API resources.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="home-section articles-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-4 section-heading">
+                <h1>Articles</h1>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <div class="row">
+                  <!-- Article 1 -->
+                  <div class="col-xs-12 col-sm-6 col-md-6 article-item">
+                    <div class="card">
+                      <a href="https://aditagarwal.com/articles/sample-article-1" target="_blank">
+                        <img src="https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg" alt="Sample Article 1" class="img-responsive">
+                      </a>
+                      <div class="card-body">
+                        <h4><a href="https://aditagarwal.com/articles/sample-article-1" target="_blank">Understanding Latent Diffusion Models in AI</a></h4>
+                        <p>A brief summary of the first sample article. This article delves into the fundamentals of latent diffusion models and their applications in modern AI-driven image generation.</p>
+                        <button class="read-more" onclick="window.location.href='https://aditagarwal.com/articles/sample-article-1'">Read More <i class="fa fa-long-arrow-right"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Article 2 -->
+                  <div class="col-xs-12 col-sm-6 col-md-6 article-item">
+                    <div class="card">
+                      <a href="https://aditagarwal.com/articles/sample-article-2" target="_blank">
+                        <img src="https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg" alt="Sample Article 2" class="img-responsive">
+                      </a>
+                      <div class="card-body">
+                        <h4><a href="https://aditagarwal.com/articles/sample-article-2" target="_blank">Leveraging YOLOv8 for Object Detection in Retail</a></h4>
+                        <p>A brief summary of the second sample article. This article explores the implementation of YOLOv8 for effective object detection and its impact on retail shelf monitoring.</p>
+                        <button class="read-more" onclick="window.location.href='https://aditagarwal.com/articles/sample-article-2'">Read More <i class="fa fa-long-arrow-right"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center" style="margin-top: 30px;">
+                  <a href="https://aditagarwal.com/articles" class="view-all-articles">View All Articles <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="home-section research-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-4 section-heading">
+                <h1>Research</h1>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <p>Undergraduate Research Assistant at University of Illinois Urbana Champaign</p>
+                <ul>
+                  <li>Investigating biases in AI models like ChatGPT, BardAI, DallE, and Midjourney under Prof. Hari Sundaram.</li>
+                  <li>Co-authoring a research paper on smart message framing to encourage reader action.</li>
+                  <li>Developed web pages, graphics, and analyzed large datasets for research projects.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="home-section contact-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-4 section-heading">
+                <h1>Contact</h1>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <p>Feel free to reach out to me, I'd love to connect! Email: <a href="mailto:adit3@illinois.edu">adit3@illinois.edu</a></p>
+                <p>Follow me on <a href="https://x.com/itsaditagarwal" target="_blank" rel="noopener">X</a>!</p>
+                <ul class="list-inline">
+                  <li>
+                    <a href="mailto:adit3@illinois.edu" target="_blank" rel="noopener">
+                      <i class="fa fa-envelope fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/adit29/" target="_blank" rel="noopener">
+                      <i class="fa fa-linkedin fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://x.com/itsaditagarwal" target="_blank" rel="noopener">
+                      <i class="fa fa-twitter fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/adit294" target="_blank" rel="noopener">
+                      <i class="fa fa-github fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dark Mode Toggle Button -->
+        <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+          <i class="fa fa-moon-o"></i>
+        </button>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to Top">
+          <i class="fa fa-arrow-up"></i>
+        </button>
+
+        <!-- Scripts -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            CommonHTML: { linebreaks: { automatic: true } },
+            tex2jax: { inlineMath: [ ['$', '$'], ['\\(','\\)'] ], displayMath: [ ['$$','$$'], ['\\[', '\\]'] ], processEscapes: false },
+            TeX: { noUndefined: { attributes: { mathcolor: 'red', mathbackground: '#FFEEEE', mathsize: '90%' } } },
+            messageStyle: 'none'
+          });
+        </script>
+
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+        <!-- Isotope -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+        <!-- Fancybox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+        <!-- Highlight.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <!-- MathJax -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+        <!-- Custom JS -->
+        <script src="/js/hugo-academic.js"></script>
+        <!-- Disqus (Optional) -->
+        <script id="dsq-count-scr" src="//aditagarwal.disqus.com/count.js" async></script>
+        <!-- Initialize Highlight.js -->
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- Smooth Scrolling -->
+        <script>
+          $(document).ready(function(){
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#top']").on('click', function(event) {
+              if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top - 50 // Adjust for fixed slimmer navbar
+                }, 800, function(){
+                  history.pushState(null, null, hash);
+                });
+              }
+            });
+
+            // Show or hide the scroll-to-top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) { // Show after 300px
+                    $('#scroll-to-top').fadeIn();
+                } else {
+                    $('#scroll-to-top').fadeOut();
+                }
+            });
+
+            // Handle scroll to top
+            $('#scroll-to-top').click(function() {
+                $('html, body').animate({scrollTop : 0}, 800);
+                return false;
+            });
+          });
+        </script>
+        <!-- Dark Mode Toggle with Persistence -->
+        <script>
+          const toggleButton = document.getElementById('dark-mode-toggle');
+          const currentMode = localStorage.getItem('dark-mode');
+
+          if (currentMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggleButton.querySelector('i').classList.remove('fa-moon-o');
+            toggleButton.querySelector('i').classList.add('fa-sun-o');
+          }
+
+          toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            let mode = 'disabled';
+            if (document.body.classList.contains('dark-mode')) {
+              toggleButton.querySelector('i').classList.remove('fa-moon-o');
+              toggleButton.querySelector('i').classList.add('fa-sun-o');
+              mode = 'enabled';
+            } else {
+              toggleButton.querySelector('i').classList.remove('fa-sun-o');
+              toggleButton.querySelector('i').classList.add('fa-moon-o');
+            }
+            localStorage.setItem('dark-mode', mode);
+          });
+        </script>
+</body>
 </html>
