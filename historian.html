@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historian | Memory Layer for Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0d0d0d;
+            --bg-secondary: #121212;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --accent: #6200ea;
+            --accent-light: #9d46ff;
+            --card-bg: #1a1a1a;
+            --gradient-start: #6200ea;
+            --gradient-end: #03dac6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(170deg, var(--bg-secondary), var(--bg-primary));
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 100;
+            background-color: rgba(13, 13, 13, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 28px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-light);
+        }
+        
+        .hero {
+            max-width: 900px;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: var(--text-secondary);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(98, 0, 234, 0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--accent);
+        }
+        
+        .button-divider {
+            display: inline-block;
+            width: 2px;
+            height: 30px;
+            background-color: var(--accent);
+            margin: 0 15px;
+            vertical-align: middle;
+        }
+        
+        section {
+            padding: 100px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+        }
+        
+        .section-title span {
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: var(--text-secondary);
+        }
+        
+        .integrations {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .integration-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .integration-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .integration-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .integration-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .integration-description {
+            color: var(--text-secondary);
+        }
+        
+        .clients {
+            background-color: var(--bg-secondary);
+        }
+        
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .client-logo {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .client-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .client-logo img {
+            max-width: 100%;
+            max-height: 60px;
+            filter: grayscale(0%) brightness(100%);
+        }
+        
+        .roadmap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .horizontal-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 40px 0;
+            padding: 20px 0;
+        }
+        
+        .horizontal-timeline::before {
+            content: '';
+            position: absolute;
+            height: 4px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+        
+        .horizontal-milestone {
+            position: relative;
+            width: 23%;
+            z-index: 1;
+        }
+        
+        .horizontal-milestone::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            border-radius: 50%;
+            top: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .horizontal-milestone-content {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .horizontal-milestone-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .horizontal-milestone-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .founder {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .founder-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            transition: transform 0.3s;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .founder-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .founder-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 20px rgba(98, 0, 234, 0.3);
+        }
+        
+        .founder-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .founder-details {
+            text-align: center;
+        }
+        
+        .founder-name {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .founder-education {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .founder-education img {
+            height: 24px;
+            margin-left: 10px;
+        }
+        
+        .founder-job {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+        }
+        
+        .founder-job img {
+            height: 24px;
+            margin-right: 10px;
+        }
+        
+        .dot-separator {
+            display: inline-block;
+            margin: 0 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+        
+        footer {
+            background-color: var(--bg-secondary);
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-light);
+        }
+        
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .problem-solution {
+            background-color: var(--bg-secondary);
+            padding: 100px 20px;
+        }
+        
+        .problem-solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .problem-card, .solution-card {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .problem-card:hover, .solution-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .problem-icon, .solution-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .problem-title, .solution-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .problem-list, .solution-list {
+            list-style: none;
+            color: var(--text-secondary);
+        }
+        
+        .problem-list li, .solution-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .problem-list li::before {
+            content: '⚠️';
+            position: absolute;
+            left: 0;
+        }
+        
+        .solution-list li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            nav {
+                padding: 15px 20px;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .horizontal-timeline {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .horizontal-timeline::before {
+                height: 100%;
+                width: 4px;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .horizontal-milestone {
+                width: 80%;
+                margin-bottom: 50px;
+            }
+            
+            .horizontal-milestone::before {
+                top: 50%;
+                left: -30px;
+                transform: translateY(-50%);
+            }
+            
+            .horizontal-milestone-content {
+                margin-top: 0;
+                margin-left: 30px;
+            }
+            
+            .founder-education, .founder-job {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .dot-separator {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-history"></i>
+            <span>Historian</span>
+        </div>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#integrations">Integrations</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <div class="hero">
+            <h1> Turn Code History into Strategic Insight.</h1>
+            <p class="tagline">Historian makes code, tickets, and incidents queryable—so you can trace intent, generate migrations, and eliminate guesswork.<br> Try Historian.</p>
+            <div class="cta-buttons">
+                <a href="http://localhost:5003" class="cta-button">Get Started on Web</a>
+                <span class="button-divider"></span>
+                <a href="#" class="cta-button secondary">Try VS Code Extension</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="problem-solution" class="problem-solution">
+        <h2 class="section-title">The <span>Problem</span> & <span>Solution</span></h2>
+        <div class="problem-solution-grid">
+            <div class="problem-card">
+                <div class="problem-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3 class="problem-title">The Problem</h3>
+                <ul class="problem-list">
+                    <li>Code changes lose their context over time</li>
+                    <li>Migration decisions become guesswork</li>
+                    <li>Incidents lack historical context</li>
+                    <li>Knowledge transfer is manual and error-prone</li>
+                    <li>AI assistants lack long-term memory</li>
+                </ul>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3 class="solution-title">Our Solution</h3>
+                <ul class="solution-list">
+                    <li>Build a temporal knowledge graph of your codebase</li>
+                    <li>Track intent and rationale across changes</li>
+                    <li>Automate migration planning and validation</li>
+                    <li>Enable AI-powered historical reasoning</li>
+                    <li>Provide a unified memory layer for all tools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features">
+        <h2 class="section-title">Intelligent <span>Features</span></h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3 class="feature-title">Temporal Knowledge Graph</h3>
+                <p class="feature-description">Track symbol/file evolution and causality over time. Understand how code changes propagate through your system.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h3 class="feature-title">AST-Level Change Engine</h3>
+                <p class="feature-description">Parse revisions into Abstract Syntax Trees to compute semantic diff vectors and provide precise reasoning.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="feature-title">Intent Analysis</h3>
+                <p class="feature-description">Understand not just what changed, but why it changed, with AI-powered rationale detection and analysis.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <h3 class="feature-title">Impact Analysis</h3>
+                <p class="feature-description">Walk the call graph to find downstream references and auto-generate migration checklists and patches.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3 class="feature-title">Context API</h3>
+                <p class="feature-description">IDE extensions, CLI, CI/CD hooks, and Observability bridges all powered by our memory service.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="feature-title">Enterprise Security</h3>
+                <p class="feature-description">Sharded indexing, poly-repo graphs, ACL-aware queries, and air-gapped on-prem deployment options.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="integrations">
+        <h2 class="section-title">Powerful <span>Integrations</span></h2>
+        <div class="integrations">
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="integration-title">VS Code Extension</h3>
+                    <p class="integration-description">Ask questions about your code directly from your editor with our VS Code integration.</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3 class="integration-title">CLI Tool</h3>
+                    <p class="integration-description">Query your codebase history, migrations, and rationale through a powerful command line interface.</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="integration-title">CI/CD Pipeline</h3>
+                    <p class="integration-description">Enforce change policies, document automatically, and validate impacts before they hit production.</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="integration-title">AI Assistants</h3>
+                    <p class="integration-description">Empower Copilot, Cursor and other AI coding assistants with long-term code memory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="clients" class="clients">
+        <h2 class="section-title">Potential <span>Enterprise Clients</span></h2>
+        <div class="client-logos">
+            <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+            </div>
+            <div class="client-logo">
+                <img src="https://images.icon-icons.com/2699/PNG/512/microsoft_logo_icon_170957.png" alt="Microsoft">
+            </div>
+            <div class="client-logo">
+                <img style="max-height:80px;" src="https://cdnlogo.com/logos/m/59/meta.svg" alt="Meta">
+            </div>
+            <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+            </div>
+            <div class="client-logo">
+                <img src="https://lh3.googleusercontent.com/proxy/Rm5r-PcNIXtdbKqQX67lW2Fs3wrmKZ5s2srLHKgTYCOrgRmRf0siJz9-FqaFhi4cxXHXPJLubH3BZgrwuZYQC4hayaDvigIjmxM5Kz-OX7fS4CvB6dRlp9TBBm6nup1uNmvtSSk_FfycYNaAJA" alt="Databricks">
+            </div>
+            <div class="client-logo">
+                <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/github.png" alt="GitHub">
+            </div>
+        </div>
+    </section>
+    
+    <section id="roadmap">
+        <h2 class="section-title">Future <span>Roadmap</span></h2>
+        <div class="roadmap">
+            <div class="horizontal-timeline">
+                <div class="horizontal-milestone">
+                    <div class="horizontal-milestone-content">
+                        <h3 class="horizontal-milestone-title">VS Code Extension & CLI</h3>
+                        <p class="horizontal-milestone-description">Launch core extension for VS Code with Git history analysis and the CLI tool for terminal power users.</p>
+                    </div>
+                </div>
+                <div class="horizontal-milestone">
+                    <div class="horizontal-milestone-content">
+                        <h3 class="horizontal-milestone-title">JetBrains Integration & CI/CD Hooks</h3>
+                        <p class="horizontal-milestone-description">Expand to JetBrains IDEs and release CI pipeline integrations for continuous rationale enforcement.</p>
+                    </div>
+                </div>
+                <div class="horizontal-milestone">
+                    <div class="horizontal-milestone-content">
+                        <h3 class="horizontal-milestone-title">On-Prem Enterprise Deployment</h3>
+                        <p class="horizontal-milestone-description">Secure, air-gapped installation options for enterprises with strict security requirements.</p>
+                    </div>
+                </div>
+                <div class="horizontal-milestone">
+                    <div class="horizontal-milestone-content">
+                        <h3 class="horizontal-milestone-title">Copilot & Cursor Integration</h3>
+                        <p class="horizontal-milestone-description">Become the memory layer for all AI coding assistants via our Context API, enabling historical reasoning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="founder" class="founder">
+        <h2 class="section-title">Meet the <span>Founder</span></h2>
+        <div class="founder-card">
+            <div class="founder-photo">
+                <img src="https://aditagarwal.com/my_photo_22.png" alt="Adit Agarwal">
+            </div>
+            <div class="founder-details">
+                <h3 class="founder-name">Adit Agarwal</h3>
+                <div class="founder-job" style="margin-bottom: 10px;">
+                    Gen AI @ Meta | AI agents for Meta AI LLaMa
+                    <img style="height:32px;" src="https://cdnlogo.com/logos/m/59/meta.svg" alt="Meta">
+                </div>
+                <div class="founder-education">
+                    MS CS <span class="dot-separator"></span> BS CS ADV @ UIUC
+                    <img src="https://brand.illinois.edu/wp-content/uploads/2024/02/Block-I-orange-blue-background.png" alt="UIUC">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <i class="fas fa-history"></i>
+                <span>Historian</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+            <p class="copyright">© 2025 Historian. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
