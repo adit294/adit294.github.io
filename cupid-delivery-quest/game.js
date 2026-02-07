@@ -728,13 +728,19 @@
       }
     });
 
+    function isFormFocused() {
+      var el = document.activeElement;
+      return el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT');
+    }
     document.addEventListener('keydown', function (e) {
+      if (isFormFocused()) return;
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyW', 'KeyA', 'KeyS', 'KeyD'].indexOf(e.code) >= 0) {
         e.preventDefault();
         keys[e.code] = true;
       }
     });
     document.addEventListener('keyup', function (e) {
+      if (isFormFocused()) return;
       keys[e.code] = false;
     });
 
