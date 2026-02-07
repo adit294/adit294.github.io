@@ -1,0 +1,159 @@
+<!--
+  GITHUB PAGES DEPLOYMENT STEPS
+  =============================
+  1. Create a repo (e.g. adit294.github.io or username.github.io).
+  2. Put this folder (cupid-delivery-quest) in the repo.
+     - For a project page: repo/cupid-delivery-quest/index.html
+       → Site URL: https://username.github.io/cupid-delivery-quest/
+     - For site root: put index.html, styles.css, ui.js, game.js at repo root
+       → Site URL: https://username.github.io/
+  3. In repo Settings → Pages → Source: Deploy from branch.
+  4. Branch: main (or master), folder: / (root) or /docs if you use docs folder.
+  5. Save. Wait a minute, then open the URL.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cupid's Delivery Quest</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 1) LANDING -->
+    <section id="screen-landing" class="screen active">
+      <div class="landing-content">
+        <h1 class="title">Cupid's Delivery Quest</h1>
+        <p class="intro">Help Cupid deliver hearts across the city… a surprise awaits 💌</p>
+        <div class="landing-buttons">
+          <button type="button" id="btn-start" class="btn btn-primary" aria-label="Start game">Start</button>
+          <button type="button" id="btn-how-to-play" class="btn btn-secondary" aria-label="How to play">How to Play</button>
+        </div>
+        <div class="toggles">
+          <label class="toggle-row">
+            <input type="checkbox" id="toggle-sound" checked aria-label="Sound on or off">
+            <span>Sound On</span>
+          </label>
+          <label class="toggle-row">
+            <input type="checkbox" id="toggle-reduced-motion" aria-label="Reduced motion on or off">
+            <span>Reduced Motion</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) MAP / STORY -->
+    <section id="screen-map" class="screen">
+      <div class="map-header">
+        <h2>Cupid's Map</h2>
+        <p id="map-progress" class="map-progress">0/3 deliveries completed</p>
+      </div>
+      <div id="map-nodes" class="map-nodes">
+        <button type="button" class="map-node" data-level="1" aria-label="Level 1 – Falling Roses">1</button>
+        <button type="button" class="map-node" data-level="2" aria-label="Level 2 – Chocolate Catch">2</button>
+        <button type="button" class="map-node" data-level="3" aria-label="Level 3 – Cupid’s Arrow">3</button>
+      </div>
+      <p class="skip-game-wrapper">
+        <button type="button" id="btn-skip-game" class="link-skip" aria-label="Skip game and unlock all levels">Skip game</button>
+      </p>
+    </section>
+
+    <!-- 3) GAME -->
+    <section id="screen-game" class="screen">
+      <div class="game-wrapper">
+        <div class="game-hud">
+          <span id="hud-collectibles">0 / 0</span>
+          <span id="hud-hearts" aria-label="Hearts remaining"></span>
+          <div class="hud-timer-wrap">
+            <div id="hud-timer-bar" class="hud-timer-bar"></div>
+          </div>
+          <button type="button" id="btn-pause" class="btn-pause" aria-label="Pause game">Pause</button>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div id="game-overlay" class="game-overlay hidden">
+          <p id="overlay-text"></p>
+          <button type="button" id="btn-try-again" class="btn btn-primary hidden">Try Again</button>
+        </div>
+        <div id="mobile-controls" class="mobile-controls" aria-hidden="true">
+          <div class="dpad">
+            <button type="button" class="dpad-btn dpad-up" data-dir="up" aria-label="Move up">↑</button>
+            <button type="button" class="dpad-btn dpad-left" data-dir="left" aria-label="Move left">←</button>
+            <button type="button" class="dpad-btn dpad-center" aria-label="Stop">·</button>
+            <button type="button" class="dpad-btn dpad-right" data-dir="right" aria-label="Move right">→</button>
+            <button type="button" class="dpad-btn dpad-down" data-dir="down" aria-label="Move down">↓</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) LEVEL COMPLETE MODAL -->
+    <div id="modal-level-complete" class="modal" role="dialog" aria-labelledby="modal-level-title" aria-hidden="true">
+      <div class="modal-content modal-level">
+        <h3 id="modal-level-title">Level Complete!</h3>
+        <p id="modal-clue" class="modal-clue"></p>
+        <div id="confetti-container" class="confetti-container"></div>
+        <button type="button" id="btn-back-to-map" class="btn btn-primary">Back to Map</button>
+      </div>
+    </div>
+
+    <!-- 5) SHIPPING LABEL -->
+    <section id="screen-shipping" class="screen">
+      <div class="shipping-wrap">
+        <div id="printer-strip" class="printer-strip" aria-hidden="true"></div>
+        <div id="label-stamp" class="label-stamp" aria-hidden="true">APPROVED BY CUPID</div>
+        <div id="shipping-label-card" class="shipping-label-card">
+          <p id="delivery-id-display" class="delivery-id-display"></p>
+          <form id="form-shipping" class="form-shipping" novalidate>
+            <div class="form-row">
+              <label for="fullAddress">Your full address</label>
+              <textarea id="fullAddress" name="fullAddress" rows="4" placeholder="Street, city, state, ZIP, country…" required></textarea>
+              <span class="field-error" id="err-fullAddress"></span>
+            </div>
+            <button type="submit" id="btn-submit-shipping" class="btn btn-primary">Send to Cupid 💌</button>
+          </form>
+        </div>
+        <div id="sending-animation" class="sending-animation hidden" aria-hidden="true">
+          <div class="sending-cupid" aria-hidden="true">💌♥</div>
+          <p>Cupid is delivering your address…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) RECEIPT -->
+    <section id="screen-receipt" class="screen">
+      <div class="receipt-wrap">
+        <div class="receipt-card">
+          <h3>Delivery Receipt</h3>
+          <p id="receipt-delivery-id" class="receipt-id"></p>
+          <div id="receipt-address" class="receipt-address"></div>
+          <p class="receipt-status">Ready to send 💌</p>
+          <p class="receipt-disclaimer">Use the buttons below to copy or open your email with the details filled in—just hit Send.</p>
+          <div class="receipt-actions">
+            <button type="button" id="btn-copy-details" class="btn btn-secondary">Copy Details</button>
+            <a id="btn-mailto" href="#" class="btn btn-secondary">Email Details</a>
+            <button type="button" id="btn-restart-quest" class="btn btn-secondary">Restart Quest</button>
+            <button type="button" id="btn-back-to-map-receipt" class="btn btn-primary">Back to Map</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO PLAY MODAL -->
+    <div id="modal-how-to-play" class="modal" role="dialog" aria-labelledby="how-to-play-title" aria-hidden="true">
+      <div class="modal-content">
+        <h3 id="how-to-play-title">How to Play</h3>
+        <p><strong>Level 1 – Falling Roses:</strong> Move Cupid 💘 with <strong>Arrow keys</strong> or <strong>WASD</strong> (or on-screen pad on mobile). Catch falling roses 🌹 and avoid the clouds. Collect 8 to win!</p>
+        <p><strong>Level 2 – Chocolate Catch:</strong> Move left/right only at the bottom. Catch falling chocolates 🍫 and avoid the rain. Collect 10 to win!</p>
+        <p><strong>Level 3 – Cupid’s Arrow:</strong> Aim with the mouse (or touch), then click/tap to shoot. Hit the falling hearts 💖 to collect 8—don’t hit the broken hearts 💔 or you lose a life! Then break the barriers and hit the jackpot to win.</p>
+        <p>You have 3 hearts (lives) in levels 1–2. Complete all 3 levels to reveal the surprise!</p>
+        <button type="button" id="btn-close-how-to-play" class="btn btn-primary">Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+  <script src="particles.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
