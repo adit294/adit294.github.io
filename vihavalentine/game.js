@@ -22,7 +22,7 @@
     {
       name: 'Chocolate Catch',
       gameType: 'chocolate_catch',
-      count: 10,
+      count: 5,
       durationMs: 28000,
       obstacleCount: 0,
       obstacleSpeed: 0,
